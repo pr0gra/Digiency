@@ -95,6 +95,13 @@ line-height: 123.6%;
 color: #373737;
 }
 
+h3{
+  font-weight: 500;
+font-size: 25px;
+line-height: 123.6%;
+color: #373737;
+}
+
 body {
     font-family: work-sans, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
@@ -174,13 +181,34 @@ line-height: 150.6%;
 
 .post{
   margin-right: 30px;
-  max-width: 700px;
+  max-width: 770px;
+}
+
+.post__text {
+  margin-bottom: 43px;
+}
+
+.post__title {
+  margin-bottom: 18px;
 }
 
 .post__subtitle {
   font-size: 16px;
 line-height: 150.6%;
 color: #7B7B7B; 
+}
+
+.post__button {
+  background: #FF5300;
+  border-radius: 5px;
+}
+
+.post__button-text {
+  color: #FFFFFF;
+font-weight: 500;
+font-size: 20px;
+line-height: 123.6%;
+padding: 13px 23px;
 }
 
 .post__bottom-part {
@@ -193,8 +221,59 @@ color: #7B7B7B;
 
 .post__inf {
   display: flex;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+
+  font-weight: 500;
+font-size: 20px;
+line-height: 123.6%;
+
+color: #7B7B7B;
 }
 
+.post__inf-text {
+  margin-right: 30px;
+}
+
+.post__inf-img {
+  margin-right: 18px;
+}
+
+.side-bar {
+  width: 100%;
+}
+
+.side-bar__search-form {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+
+.side-bar__search-form-input { 
+height: 60px;
+width: 100%;
+
+}
+
+.letest-post__text {
+  font-weight: 500;
+font-size: 20px;
+line-height: 123.6%;
+}
+
+.letest-posts__title {
+  margin-bottom: 30px;
+}
+
+.letest-post__img {
+  margin-right: 17px;
+}
+
+.letest-post {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
 
 @media(max-width:1024px) {
 
