@@ -1,0 +1,37 @@
+.about-us-img {
+  width: 372px;
+  height: 192px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.about-us-text-part {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.about-us-subtitle {
+  margin-bottom: 25px;
+}
+
+.about-us-title {
+  margin-bottom: 18px;
+}
+
+.about-us-content-array {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-us-item {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.about-us-item-img {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}

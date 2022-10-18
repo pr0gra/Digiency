@@ -1,0 +1,44 @@
+:root {
+  --orange: #ff5300;
+  --orange-background: #fff7f4;
+  --black: #373737;
+  --dark-background: #18191a;
+  --dark-view1: #242526;
+  --dark-view2: #3a3b3c;
+  --gray-paragraph: #7b7b7b;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: Work Sans;
+  src: url(./assets/fonts/WorkSans-Regular.woff2);
+}
+
+h1 {
+  line-height: 38.62px;
+  font-family: Work Sans;
+  font-size: 31.25px;
+  color: var(--black);
+}
+h2 {
+  font-family: Work Sans;
+  font-size: 25px;
+  color: var(--black);
+}
+h3 {
+  font-family: Work Sans;
+  font-size: 20px;
+  color: var(--black);
+}
+
+p {
+  line-height: 24.1px;
+  color: var(--gray-paragraph);
+  font-family: Work Sans;
+  font-size: 16px;
+}
+
+span {
+  font-family: Work Sans;
+  color: var(--orange);
+}
