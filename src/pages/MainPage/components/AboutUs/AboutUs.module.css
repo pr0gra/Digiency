@@ -1,0 +1,41 @@
+.about-us {
+  margin-bottom: 50px;
+}
+
+.about-us-img {
+  width: 372px;
+  height: 192px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.about-us-text-part {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.about-us-subtitle {
+  margin-bottom: 25px;
+}
+
+.about-us-title {
+  margin-bottom: 18px;
+}
+
+.about-us-content-array {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.about-us-item {
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+}
+
+.about-us-item-img {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}

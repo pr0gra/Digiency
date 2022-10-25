@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' "
+    "fix-styles": "prettier-stylelint --write 'src/**/*.{css}' ",
+    "start-server": "json-server --watch server/db.json --port 3004"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.6",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
-    "react-css-modules": "^4.7.11",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.4.0",
+    "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
@@ -22,13 +25,16 @@
     "@vitejs/plugin-react": "^2.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "json-server": "^0.17.0",
     "prettier": "^2.7.1",
     "prettier-stylelint": "^0.4.2",
-    "stylelint": "^14.2.0",
+    "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^29.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
   }

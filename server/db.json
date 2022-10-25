@@ -1,0 +1,40 @@
+{
+  "teamMembers": [
+    {
+      "id": 1,
+      "avatar": "team-member-ui-ux-designer",
+      "name": "Gustavo Herwitz",
+      "position": "UI/UX Designer",
+      "links": {
+        "facebook": "https://www.google.ru/",
+        "instagram": "https://www.google.ru/",
+        "twitter": "https://www.google.ru/",
+        "skype": "https://www.google.ru/"
+      }
+    },
+    {
+      "id": 2,
+      "avatar": "team-member-graphic-designer",
+      "name": "Phillip Curtis",
+      "position": "Graphic Designer",
+      "links": {
+        "facebook": "https://www.google.ru/",
+        "instagram": "https://www.google.ru/",
+        "twitter": "https://www.google.ru/",
+        "skype": "https://www.google.ru/"
+      }
+    },
+    {
+      "id": 3,
+      "avatar": "team-member-web-developer",
+      "name": "Talan Torff",
+      "position": "Web Developer",
+      "links": {
+        "facebook": "https://www.google.ru/",
+        "instagram": "https://www.google.ru/",
+        "twitter": "https://www.google.ru/",
+        "skype": "https://www.google.ru/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.contact-us-text-part {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.contact-us-text-part-subtitle {
+  margin-bottom: 18px;
+}
+
+.contact-us-contact-ways {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-us-contact-way-container {
+  height: 224px;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+  padding: 18px 0 0 18px;
+}
+
+.contact-us-contact-way-top-part {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.contact-us-contact-way-span {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 123.6%;
+}
+
+.contact-us-contact-way-title {
+  font-weight: 600;
+  font-size: 31.25px;
+}
+
+.contact-us-contact-way-bottom-part-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 123.6%;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,44 @@
+.our-experience {
+  margin-bottom: 50px;
+  padding: 50px 17px;
+  background-color: var(--orange-background);
+}
+
+.our-experience-text-part-subtitle {
+  margin-bottom: 18px;
+}
+
+.our-experience-text-part-title {
+  margin-bottom: 18px;
+}
+
+.our-experience-text-part-text {
+  margin-bottom: 25px;
+}
+
+.our-experience-text-part {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.our-experience-array-part {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.our-experience-array-item {
+  padding: 71px 68px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+}
+
+.our-experience-array-item-title {
+  margin-bottom: 18px;
+  font-size: 48px;
+}
+
+.our-experience-array-item-subtitle {
+  font-size: 25px;
+}
