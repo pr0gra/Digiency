@@ -5,6 +5,7 @@ import { MainHero } from './components/MainHero/MainHero'
 import { OurExperience } from './components/OurExperience/OurExperience'
 import { TeamMember } from './components/TeamMember/TeamMember'
 import { ContactUs } from './components/ContactUs/ContactUs'
+import { OurWork } from './components/OurWork/OurWork'
 
 export function MainPage() {
   return (
@@ -19,6 +20,7 @@ export function MainPage() {
       <OurExperience />
       <Layout>
         <TeamMember />
+        <OurWork />
         <ContactUs />
       </Layout>
     </>

@@ -1,0 +1,10 @@
+.our-work-navigation-list-item-button {
+  all: unset;
+}
+
+.our-work-navigation-list {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  list-style-type: none;
+}

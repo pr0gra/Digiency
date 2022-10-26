@@ -36,5 +36,32 @@
         "skype": "https://www.google.ru/"
       }
     }
+  ],
+  "ourWorks": [
+    {
+      "id": 1,
+      "projectType": "Graphic Design",
+      "img": "our-work-img-1"
+    },
+    {
+      "id": 2,
+      "projectType": "UI/UX Design",
+      "img": "our-work-img-2"
+    },
+    {
+      "id": 3,
+      "projectType": "Web Development",
+      "img": "our-work-img-3"
+    },
+    {
+      "id": 4,
+      "projectType": "UI/UX Design",
+      "img": "our-work-img-4"
+    },
+    {
+      "id": 5,
+      "projectType": "Web Development",
+      "img": "our-work-img-5"
+    }
   ]
 }

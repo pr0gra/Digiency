@@ -1,0 +1,17 @@
+.our-work-text-part {
+  text-align: center;
+}
+
+.our-work-text-part-title {
+  margin-bottom: 25px;
+}
+
+.our-work-text-part-subtitle {
+  margin-bottom: 18px;
+}
+
+.our-work-images-part {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
