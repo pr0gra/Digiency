@@ -6,6 +6,7 @@ import { OurExperience } from './components/OurExperience/OurExperience'
 import { TeamMember } from './components/TeamMember/TeamMember'
 import { ContactUs } from './components/ContactUs/ContactUs'
 import { OurWork } from './components/OurWork/OurWork'
+import { ClientsFeedback } from './components/ClientsFeedback/ClientsFeedback'
 
 export function MainPage() {
   return (
@@ -21,6 +22,9 @@ export function MainPage() {
       <Layout>
         <TeamMember />
         <OurWork />
+      </Layout>
+      <ClientsFeedback />
+      <Layout>
         <ContactUs />
       </Layout>
     </>

@@ -12,7 +12,7 @@ interface ourWorkProject {
 
 export function OurWork() {
   const [projectType, setProjectType] = useState('All')
-  const [activeButton, setActiveButton] = useState(0)
+
   const { data, isLoading, isError } = useGetOurWorksQuery()
   if (isLoading) {
     return <h2>Loading</h2>
@@ -20,7 +20,6 @@ export function OurWork() {
   if (isError) {
     return <h2>Error</h2>
   }
-  console.log(data)
 
   return (
     <div className={styles['our-work']}>
@@ -30,18 +29,27 @@ export function OurWork() {
           We Have Some <span>Designed & Development</span> Projects
         </h2>
       </div>
-      <OurWorkNav
-        setProjectType={setProjectType}
-        setActiveButton={setActiveButton}
-      />
+      <OurWorkNav setProjectType={setProjectType} />
       <div className="our-work-images-part">
-        {projectType == 'All' ? (
-          data.map((project: ourWorkProject) => {
-            return <Picture imgName={project.img} />
-          })
-        ) : (
-          <></>
-        )}
+        {projectType == 'All'
+          ? data.map((project: ourWorkProject) => {
+              return (
+                <Picture
+                  imgName={project.img}
+                  onMouseOver={e =>
+                    (e.currentTarget.src =
+                      '../../../../assets/images/team-member-web-developer.jpg')
+                  }
+                />
+              )
+            })
+          : data
+              .filter((project: ourWorkProject) => {
+                return project.projectType === projectType
+              })
+              .map((project: ourWorkProject) => {
+                return <Picture imgName={project.img} />
+              })}
       </div>
     </div>
   )

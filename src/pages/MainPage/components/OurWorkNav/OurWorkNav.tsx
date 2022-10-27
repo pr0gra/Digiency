@@ -1,14 +1,12 @@
+import { useState } from 'react'
 import styles from './OurWorkNav.module.css'
 
 interface OurWorkNavProps {
   setProjectType: React.Dispatch<React.SetStateAction<string>>
-  setActiveButton: React.Dispatch<React.SetStateAction<number>>
 }
 
-export function OurWorkNav({
-  setProjectType,
-  setActiveButton,
-}: OurWorkNavProps) {
+export function OurWorkNav({ setProjectType }: OurWorkNavProps) {
+  const [activeButton, setActiveButton] = useState(0)
   const buttonsArray = [
     'All',
     'Graphic Design',
@@ -29,6 +27,7 @@ export function OurWorkNav({
                 className={styles['our-work-navigation-list-item-button']}
               >
                 <p
+                  style={{ color: activeButton === index ? '#FF5300' : '' }}
                   className={
                     styles['our-work-navigation-list-item-button-text']
                   }

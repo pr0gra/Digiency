@@ -10,7 +10,14 @@ export const digiencyApi = createApi({
     getOurWorks: build.query({
       query: () => `ourWorks`,
     }),
+    getClientsFeedback: build.query({
+      query: () => `clientsFeedback`,
+    }),
   }),
 })
 
-export const { useGetTeamMembersQuery, useGetOurWorksQuery } = digiencyApi
+export const {
+  useGetTeamMembersQuery,
+  useGetOurWorksQuery,
+  useGetClientsFeedbackQuery,
+} = digiencyApi

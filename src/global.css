@@ -44,3 +44,7 @@ span {
   color: var(--orange);
   font-family: 'Work Sans';
 }
+
+.swiper-pagination-bullet-active {
+  background: var(--orange);
+}
