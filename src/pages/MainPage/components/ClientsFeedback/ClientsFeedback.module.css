@@ -1,5 +1,4 @@
 .clients-feedback {
-  padding: 0 36px;
   margin-bottom: 120px;
 }
 
@@ -8,7 +7,7 @@
   margin-left: 20px;
   margin-bottom: 47px;
   background-color: var(--orange);
-  width: 226px;
+  width: 180px;
 }
 
 .clients-feedback-text-part {
@@ -43,4 +42,8 @@
   font-weight: 400;
   font-size: 12.8px;
   line-height: 123.6%;
+}
+
+.clients-feedback-scroll-part {
+  padding-left: 16px;
 }

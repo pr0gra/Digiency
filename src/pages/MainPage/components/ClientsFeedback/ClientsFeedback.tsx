@@ -23,7 +23,7 @@ export function ClientsFeedback() {
   if (isError) {
     return <h2>Error</h2>
   }
-  console.log(data)
+
   return (
     <div className={styles['clients-feedback']}>
       <div className={styles['clients-feedback-text-part']}>
@@ -36,9 +36,8 @@ export function ClientsFeedback() {
       </div>
       <div className={styles['clients-feedback-scroll-part']}>
         <Swiper
-          // install Swiper modules
           modules={[Pagination, A11y]}
-          spaceBetween={218}
+          spaceBetween={260}
           slidesPerView={2}
           pagination={{ clickable: true }}
           onSwiper={swiper => console.log(swiper)}
