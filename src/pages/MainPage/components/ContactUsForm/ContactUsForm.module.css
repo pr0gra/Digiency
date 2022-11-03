@@ -1,0 +1,53 @@
+.contact-us-form {
+  margin-bottom: 50px;
+}
+
+.text-part {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.form-part {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.img {
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.input {
+  all: unset;
+  outline: none;
+  height: 60px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input[type='text'] {
+  padding-left: 18px;
+}
+
+.input::placeholder {
+  font-family: 'Work Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150.6%;
+  color: #7b7b7b;
+}
+
+.input-select {
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150.6%;
+  color: #7b7b7b;
+}
+
+.text-area::placeholder {
+  padding-left: 18px;
+}

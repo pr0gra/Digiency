@@ -1,15 +1,17 @@
-import styles from "./Button.module.css";
-import cx from "classnames";
+import styles from './Button.module.css'
+import cx from 'classnames'
+import { HTMLAttributes, PropsWithChildren } from 'react'
 
 interface ButtonProps {
-  children: string;
-  buttonType: string;
+  buttonType: string
 }
 
-export function Button({ children, buttonType }: ButtonProps) {
+type Props = ButtonProps & PropsWithChildren<HTMLAttributes<HTMLButtonElement>>
+
+export function Button({ children, buttonType, ...rest }: Props) {
   return (
-    <button className={cx(styles["button"], styles[`${buttonType}`])}>
+    <button className={cx(styles['button'], styles[`${buttonType}`])} {...rest}>
       {children}
     </button>
-  );
+  )
 }

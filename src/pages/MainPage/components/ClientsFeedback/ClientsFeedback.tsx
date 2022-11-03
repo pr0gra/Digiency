@@ -7,14 +7,6 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import { useGetClientsFeedbackQuery } from '../../../../../redux'
 
-interface clientsFeedback {
-  id: number
-  avatar: string
-  name: string
-  position: string
-  comment: string
-}
-
 export function ClientsFeedback() {
   const { data, isLoading, isError } = useGetClientsFeedbackQuery()
   if (isLoading) {
@@ -43,9 +35,9 @@ export function ClientsFeedback() {
           onSwiper={swiper => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
-          {data.map((client: clientsFeedback) => {
+          {data!.map(client => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={client.id}>
                 <img
                   className={styles['feedback-container-img']}
                   src={`/src/assets/images/${client.avatar}`}

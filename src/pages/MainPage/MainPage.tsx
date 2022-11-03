@@ -7,6 +7,8 @@ import { TeamMember } from './components/TeamMember/TeamMember'
 import { ContactUs } from './components/ContactUs/ContactUs'
 import { OurWork } from './components/OurWork/OurWork'
 import { ClientsFeedback } from './components/ClientsFeedback/ClientsFeedback'
+import { Footer } from '../../components/Footer/Footer'
+import { FooterBottom } from '../../components/FooterBottom/FooterBottom'
 
 export function MainPage() {
   return (
@@ -27,6 +29,8 @@ export function MainPage() {
       <Layout>
         <ContactUs />
       </Layout>
+      <Footer />
+      <FooterBottom />
     </>
   )
 }

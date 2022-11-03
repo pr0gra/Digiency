@@ -1,0 +1,11 @@
+.text {
+  color: white;
+}
+
+.footer-bottom {
+  gap: 6px;
+  background: var(--orange);
+  height: 84px;
+  display: flex;
+  align-items: center;
+}

@@ -2,6 +2,7 @@ import styles from './ContactUs.module.css'
 import mailIcon from '../../../../assets/icons/contact-us-mail-icon.svg'
 import phoneIcon from '../../../../assets/icons/contact-us-phone-icon.svg'
 import locationIcon from '../../../../assets/icons/contact-us-location-icon.svg'
+import { ContactUsForm } from '../ContactUsForm/ContactUsForm'
 
 export function ContactUs() {
   return (
@@ -80,6 +81,7 @@ export function ContactUs() {
           </div>
         </div>
       </div>
+      <ContactUsForm />
     </div>
   )
 }

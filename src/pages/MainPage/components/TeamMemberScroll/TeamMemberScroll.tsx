@@ -24,7 +24,7 @@ export function TeamMemberScroll() {
 
   return (
     <div className={styles['team-member-scroll']}>
-      {data.map((teamMember: TeamMemberScrollProps) => {
+      {data!.map((teamMember: TeamMemberScrollProps) => {
         return (
           <div key={teamMember.id} className={styles['scrolling-container']}>
             <Picture

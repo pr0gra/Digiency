@@ -3,12 +3,7 @@ import { useState } from 'react'
 import { OurWorkNav } from '../OurWorkNav/OurWorkNav'
 import { useGetOurWorksQuery } from '../../../../../redux'
 import { Picture } from '../../../../components/Picture/Picture'
-
-interface ourWorkProject {
-  id: number
-  projectType: string
-  img: string
-}
+import { ourWorks } from '../../../../../redux/digiencyApi'
 
 export function OurWork() {
   const [projectType, setProjectType] = useState('All')
@@ -32,23 +27,15 @@ export function OurWork() {
       <OurWorkNav setProjectType={setProjectType} />
       <div className="our-work-images-part">
         {projectType == 'All'
-          ? data.map((project: ourWorkProject) => {
-              return (
-                <Picture
-                  imgName={project.img}
-                  onMouseOver={e =>
-                    (e.currentTarget.src =
-                      '../../../../assets/images/team-member-web-developer.jpg')
-                  }
-                />
-              )
+          ? data!.map(project => {
+              return <Picture key={project.id} imgName={project.img} />
             })
-          : data
-              .filter((project: ourWorkProject) => {
+          : data!
+              .filter((project: ourWorks) => {
                 return project.projectType === projectType
               })
-              .map((project: ourWorkProject) => {
-                return <Picture imgName={project.img} />
+              .map(project => {
+                return <Picture key={project.id} imgName={project.img} />
               })}
       </div>
     </div>
