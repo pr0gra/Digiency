@@ -2,6 +2,10 @@
   all: unset;
 }
 
+.our-work-navigation {
+  margin-bottom: 50px;
+}
+
 .our-work-navigation-list {
   display: flex;
   gap: 18px;

@@ -21,3 +21,34 @@
 .main-hero-text-part {
   text-align: center;
 }
+
+.navigation {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .header {
+    height: 80px;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .theme-icon {
+    position: relative;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .list {
+    gap: 25px;
+    display: flex;
+    list-style-type: none;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}

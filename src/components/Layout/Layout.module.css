@@ -1,3 +1,9 @@
 .layout {
-  padding: 0px 16px;
+  padding: 0 16px;
+}
+
+@media (min-width: 767px) {
+  .layout {
+    padding: 0 40px;
+  }
 }
