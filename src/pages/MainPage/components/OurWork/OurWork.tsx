@@ -25,17 +25,29 @@ export function OurWork() {
         </h2>
       </div>
       <OurWorkNav setProjectType={setProjectType} />
-      <div className="our-work-images-part">
+      <div className={styles['our-work-images-part']}>
         {projectType == 'All'
           ? data!.map(project => {
-              return <Picture key={project.id} imgName={project.img} />
+              return (
+                <Picture
+                  className={styles['picture']}
+                  key={project.id}
+                  imgName={project.img}
+                />
+              )
             })
           : data!
               .filter((project: ourWorks) => {
                 return project.projectType === projectType
               })
               .map(project => {
-                return <Picture key={project.id} imgName={project.img} />
+                return (
+                  <Picture
+                    className={styles['picture']}
+                    key={project.id}
+                    imgName={project.img}
+                  />
+                )
               })}
       </div>
     </div>

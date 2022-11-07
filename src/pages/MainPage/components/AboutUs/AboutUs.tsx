@@ -4,30 +4,33 @@ import { Button } from '../../../../components/Button/Button'
 import folderIcon from '../../../../assets/icons/about-us-folder-icon.svg'
 import quotesIcon from '../../../../assets/icons/about-us-quotes-icon.svg'
 import settingsIcon from '../../../../assets/icons/about-us-settings-icon.svg'
-import vecorIcon from '../../../../assets/icons/about-us-vector-icon.svg'
+import vectorIcon from '../../../../assets/icons/about-us-vector-icon.svg'
 
 export function AboutUs() {
   return (
     <div className={styles['about-us']}>
-      <img className={styles['about-us-img']} src={aboutUsImg} alt="" />
-      <div className={styles['about-us-text-part']}>
-        <p className={styles['about-us-subtitle']}>About Us</p>
-        <h2 className={styles['about-us-title']}>
-          We Are <span>Making Ideas Better</span> For Everyone
-        </h2>
-        <p className={styles['about-us-subtitle']}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur
-          imperdiet at a augue ullamcorper. Leo faucibus feugiat rutrum aenean{' '}
-        </p>
-        <p className={styles['about-us-subtitle']}>
-          Ornare etiam erat volutpat tempor fringilla mi. Elit a blandit
-          faucibus est, dui interdum ut amet.
-        </p>
-        <Button buttonType="button-primary">Contact us</Button>
+      <div className={styles['top-part']}>
+        <img className={styles['about-us-img']} src={aboutUsImg} alt="" />
+        <div className={styles['about-us-text-part']}>
+          <p className={styles['about-us-subtitle']}>About Us</p>
+          <h2 className={styles['about-us-title']}>
+            We Are <span>Making Ideas Better</span> For Everyone
+          </h2>
+          <p className={styles['about-us-subtitle']}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur
+            imperdiet at a augue ullamcorper. Leo faucibus feugiat rutrum aenean{' '}
+          </p>
+          <p className={styles['about-us-subtitle']}>
+            Ornare etiam erat volutpat tempor fringilla mi. Elit a blandit
+            faucibus est, dui interdum ut amet.
+          </p>
+          <Button buttonType="button-primary">Contact us</Button>
+        </div>
       </div>
       <div className={styles['about-us-content-array']}>
         <div className={styles['about-us-item']}>
           <img
+            style={{ background: '#FF5300' }}
             className={styles['about-us-item-img']}
             src={folderIcon}
             alt=""
@@ -38,6 +41,7 @@ export function AboutUs() {
         </div>
         <div className={styles['about-us-item']}>
           <img
+            style={{ background: '#7B7B7B' }}
             className={styles['about-us-item-img']}
             src={quotesIcon}
             alt=""
@@ -48,6 +52,7 @@ export function AboutUs() {
         </div>
         <div className={styles['about-us-item']}>
           <img
+            style={{ background: '#00ACFF' }}
             className={styles['about-us-item-img']}
             src={settingsIcon}
             alt=""
@@ -57,7 +62,12 @@ export function AboutUs() {
           </h3>
         </div>
         <div className={styles['about-us-item']}>
-          <img className={styles['about-us-item-img']} src={vecorIcon} alt="" />
+          <img
+            style={{ background: '#373737' }}
+            className={styles['about-us-item-img']}
+            src={vectorIcon}
+            alt=""
+          />
           <h3 className="about-us-item-title">
             Experience to give you a better results
           </h3>

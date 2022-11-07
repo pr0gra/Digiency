@@ -29,7 +29,7 @@ export function ClientsFeedback() {
       <div className={styles['clients-feedback-scroll-part']}>
         <Swiper
           modules={[Pagination, A11y]}
-          spaceBetween={260}
+          spaceBetween={100}
           slidesPerView={2}
           pagination={{ clickable: true }}
           onSwiper={swiper => console.log(swiper)}
@@ -39,13 +39,13 @@ export function ClientsFeedback() {
             return (
               <SwiperSlide key={client.id}>
                 <img
-                  className={styles['feedback-container-img']}
+                  className={styles['feedback-img']}
                   src={`/src/assets/images/${client.avatar}`}
                   alt=""
                 />
                 <div className={styles['feedback-container']}>
                   <div className={styles['feedback-container-text-part']}>
-                    <p className={styles['clients-feedback-text']}>
+                    <p className={styles['clients-feedback-text-name']}>
                       {client.name}
                     </p>
                     <p className={styles['clients-feedback-text-positon']}>

@@ -1,11 +1,21 @@
 .text {
   color: white;
+  flex: 1;
+  text-align: center;
 }
 
 .footer-bottom {
   gap: 6px;
   background: var(--orange);
-  height: 84px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+}
+
+@media (min-width: 767px) {
+  .text {
+    text-align: inherit;
+  }
 }

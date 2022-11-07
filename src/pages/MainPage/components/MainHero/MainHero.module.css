@@ -22,10 +22,48 @@
   margin-bottom: 25px;
 }
 
+.media-links {
+  display: none;
+}
+
 @media (min-width: 767px) {
   .main-hero {
+    box-shadow: inset 0px 3px 12px 0px rgb(0 0 0 / 10%);
+    padding: 73px 40px;
     display: flex;
     flex-direction: row-reverse;
     gap: 19px;
+    justify-content: center;
+  }
+
+  .main-hero-text-part {
+    padding: 0;
+    text-align: initial;
+    max-width: 500px;
+    flex: 1;
+  }
+
+  .hero-img {
+    align-self: center;
+    margin: 0;
+  }
+
+  .media-links {
+    gap: 5px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-hero {
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 639px;
+    height: 429px;
   }
 }

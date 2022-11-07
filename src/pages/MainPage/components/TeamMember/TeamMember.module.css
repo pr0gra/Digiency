@@ -10,3 +10,9 @@
 .team-member {
   margin-bottom: 50px;
 }
+
+@media (min-width: 767px) {
+  .team-member-text-part {
+    margin-bottom: 60px;
+  }
+}

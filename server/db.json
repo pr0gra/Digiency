@@ -35,6 +35,18 @@
         "twitter": "https://www.google.ru/",
         "skype": "https://www.google.ru/"
       }
+    },
+    {
+      "id": 4,
+      "avatar": "team-member-app-developer",
+      "name": "Abram Vaccaro",
+      "position": "App Developer",
+      "links": {
+        "facebook": "https://www.google.ru/",
+        "instagram": "https://www.google.ru/",
+        "twitter": "https://www.google.ru/",
+        "skype": "https://www.google.ru/"
+      }
     }
   ],
   "ourWorks": [
@@ -62,6 +74,11 @@
       "id": 5,
       "projectType": "Web Development",
       "img": "our-work-img-5"
+    },
+    {
+      "id": 6,
+      "projectType": "Graphic Design",
+      "img": "our-work-img-6"
     }
   ],
   "clientsFeedback": [
@@ -70,42 +87,42 @@
       "avatar": "clients-feedback-justin-septimus-avatar.svg",
       "name": "Justin Septimus",
       "position": "CEO,word yt",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     },
     {
       "id": 2,
       "avatar": "clients-feedback-ashlynn-gouse-avatar.svg",
       "name": "Ashlynn Gouse",
       "position": "Managing Director",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     },
     {
       "id": 3,
       "avatar": "clients-feedback-jason-vurhis-avatar.jpg",
       "name": "Jason Vurhis",
       "position": "UI/UX Designer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     },
     {
       "id": 4,
       "avatar": "clients-feedback-demis-karibidis-avatar.jpg",
       "name": "Demis karibidis",
       "position": "Web Developer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     },
     {
       "id": 5,
       "avatar": "clients-feedback-jhony-dep-avatar.jpg",
       "name": "Jony Dep",
       "position": "Graphic Designer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     },
     {
       "id": 6,
       "avatar": "clients-feedback-sergey-shuklin-avatar.jpg",
       "name": "Sergey Shuklin",
       "position": "Frontend Developer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     }
   ]
 }

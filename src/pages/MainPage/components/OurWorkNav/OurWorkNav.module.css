@@ -12,3 +12,9 @@
   overflow-x: auto;
   list-style-type: none;
 }
+
+@media (min-width: 767px) {
+  .our-work-navigation-list {
+    justify-content: center;
+  }
+}

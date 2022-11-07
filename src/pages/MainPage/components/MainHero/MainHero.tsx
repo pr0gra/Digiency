@@ -1,11 +1,18 @@
 import mainHeroImg from '../../../../assets/images/main-hero-img.svg'
 import { Button } from '../../../../components/Button/Button'
-import { Picture } from '../../../../components/Picture/Picture'
+import { MediaLinks } from '../../../../components/MediaLinks/MediaLinks'
 import styles from './MainHero.module.css'
 
 export function MainHero() {
   return (
     <div className={styles['main-hero']}>
+      <MediaLinks
+        className={styles['media-links']}
+        facebookLink="/"
+        instLink="/"
+        twitterLink="/"
+        skypeLink="/"
+      />
       <img className={styles['hero-img']} src={mainHeroImg} alt="" />{' '}
       <div className={styles['main-hero-text-part']}>
         <h1 className={styles['main-hero-text-part-title']}>

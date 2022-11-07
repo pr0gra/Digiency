@@ -2,6 +2,7 @@
   margin-bottom: 50px;
   padding: 50px 17px;
   background-color: var(--orange-background);
+  gap: 24px;
 }
 
 .our-experience-text-part-subtitle {
@@ -41,4 +42,62 @@
 
 .our-experience-array-item-subtitle {
   font-size: 25px;
+}
+
+@media (min-width: 767px) {
+  .our-experience {
+    margin-bottom: 120px;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .our-experience-array-part {
+    gap: 8px;
+  }
+
+  .our-experience-array-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 46px 0 42px 0;
+  }
+
+  .our-experience-array-item:nth-child(odd) {
+    position: relative;
+    top: -30px;
+  }
+
+  .our-experience-array-item-title {
+    font-size: 25px;
+  }
+
+  .our-experience-array-part {
+    display: grid;
+    grid-template-columns: repeat(2, 162px);
+  }
+
+  .our-experience-array-item-subtitle {
+    font-size: 16px;
+  }
+
+  .our-experience-text-part {
+    text-align: initial;
+  }
+}
+
+@media (min-width: 1440px) {
+  .our-experience-array-item-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 123.6%;
+  }
+
+  .our-experience-array-part {
+    grid-template-columns: repeat(2, 250px);
+  }
+
+  .our-experience-array-item {
+    padding: 58px 0 58px 0;
+  }
 }

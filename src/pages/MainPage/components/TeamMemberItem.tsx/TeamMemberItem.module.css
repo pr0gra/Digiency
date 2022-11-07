@@ -1,0 +1,60 @@
+.team-member-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.scrolling-container {
+  flex: 0 0 auto;
+  width: 270px;
+  height: 350px;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+}
+
+.team-member-text-part {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.team-member-text-part-title {
+  margin-bottom: 12px;
+  color: black;
+}
+
+.team-member-text-part-subtitle {
+  color: black;
+}
+
+.media-links {
+  display: none;
+}
+
+.picture {
+  height: 250px;
+  width: 270px;
+}
+
+@media (min-width: 767px) {
+  .scrolling-container {
+    position: relative;
+  }
+
+  .team-member-scroll {
+    justify-content: center;
+  }
+
+  .media-links {
+    display: none;
+    pointer-events: none;
+  }
+
+  .media-links-hover {
+    position: absolute;
+    display: flex;
+    right: 0;
+    flex-direction: column;
+    top: 12px;
+    gap: 5px;
+  }
+}

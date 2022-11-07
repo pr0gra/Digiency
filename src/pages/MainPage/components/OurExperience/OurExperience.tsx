@@ -10,7 +10,7 @@ export function OurExperience() {
         </p>
         <h2 className={styles['our-experience-text-part-title']}>
           We Have Completed
-          <span>150+ Projects</span>
+          <span> 150+ Projects </span>
           Succesfully
         </h2>
         <p className={styles['our-experience-text-part-text']}>

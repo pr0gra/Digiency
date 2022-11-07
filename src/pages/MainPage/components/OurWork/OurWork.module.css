@@ -18,10 +18,23 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 @media (min-width: 767px) {
+  .our-work-images-part {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 370px);
+    justify-content: center;
+  }
+
+  .picture {
+    width: 370px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .our-work-images-part {
+    grid-template-columns: repeat(3, 370px);
+  }
 }

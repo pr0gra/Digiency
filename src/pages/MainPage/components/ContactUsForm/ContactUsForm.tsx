@@ -25,13 +25,12 @@ export function ContactUsForm() {
   return (
     <div className={styles['contact-us-form']}>
       <img className={styles['img']} src={messageImg} alt="" />
-      <div className={styles['text-part']}>
-        <h2>
+
+      <form onSubmit={handleSubmit} className={styles['form-part']} action="">
+        <h2 className={cx(styles['text-part'], styles['text-part-desktop'])}>
           Send Your
           <span> Message To Us</span>
         </h2>
-      </div>
-      <form onSubmit={handleSubmit} className={styles['form-part']} action="">
         <input
           className={styles['input']}
           type="text"
@@ -94,7 +93,7 @@ export function ContactUsForm() {
         {errors.mobile && touched.mobile && <p>{errors.mobile}</p>}
 
         <input
-          className={styles['input']}
+          className={cx(styles['input'], styles['input-desktop'])}
           type="text"
           id="message"
           placeholder="Send Message"

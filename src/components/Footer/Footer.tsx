@@ -5,6 +5,7 @@ import instLogo from '../../assets/icons/instagram-fill.svg'
 import twitterLogo from '../../assets/icons/twitter-fill.svg'
 import skypeLogo from '../../assets/icons/skype-fill.svg'
 import planeIcon from '../../assets/icons/plane-icon.svg'
+import { MediaLinks } from '../MediaLinks/MediaLinks'
 
 export function Footer() {
   return (
@@ -16,36 +17,12 @@ export function Footer() {
           egestas etiam posuere vitae cursus consectetur eu. Cursus vitae
           porttitor libero est posuere.
         </p>
-        <div className={styles['social-media']}>
-          <a
-            className={styles['social-media-link']}
-            href="https://www.google.ru/"
-          >
-            <img
-              className={styles['social-media-img']}
-              src={facebookLogo}
-              alt=""
-            />
-          </a>
-          <a
-            className={styles['social-media-link']}
-            href="https://www.google.ru/"
-          >
-            <img src={instLogo} alt="" />
-          </a>
-          <a
-            className={styles['social-media-link']}
-            href="https://www.google.ru/"
-          >
-            <img src={twitterLogo} alt="" />
-          </a>
-          <a
-            className={styles['social-media-link']}
-            href="https://www.google.ru/"
-          >
-            <img src={skypeLogo} alt="" />
-          </a>
-        </div>
+        <MediaLinks
+          facebookLink="/"
+          instLink="/"
+          twitterLink="/"
+          skypeLink="/"
+        />
       </div>
       <div className={styles['nav-container']}>
         <h2 className={styles['title']}>Company</h2>

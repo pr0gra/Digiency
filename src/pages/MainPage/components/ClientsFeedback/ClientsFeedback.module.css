@@ -19,7 +19,7 @@
   margin-bottom: 18px;
 }
 
-.feedback-container-img {
+.feedback-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -33,7 +33,8 @@
   gap: 10px;
 }
 
-.clients-feedback-text {
+.clients-feedback-text,
+.clients-feedback-text-name {
   color: #ffff;
 }
 
@@ -46,4 +47,29 @@
 
 .clients-feedback-scroll-part {
   padding-left: 16px;
+}
+
+@media (min-width: 767px) {
+  .clients-feedback-scroll-part {
+    padding-left: 40px;
+  }
+
+  .feedback-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .clients-feedback-text-name {
+    font-size: 20px;
+  }
+
+  .feedback-container {
+    width: 300px;
+    height: 214px;
+  }
+
+  .clients-feedback-text-positon {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
 }

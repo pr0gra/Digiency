@@ -43,3 +43,18 @@
   line-height: 123.6%;
   margin-bottom: 10px;
 }
+
+@media (min-width: 767px) {
+  .contact-us-contact-ways {
+    flex-direction: row;
+  }
+
+  .contact-us-contact-way-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-us-contact-way-span {
+    font-size: 20px;
+  }
+}

@@ -1,5 +1,6 @@
 import { useGetTeamMembersQuery } from '../../../../../redux/digiencyApi'
-import { Picture } from '../../../../components/Picture/Picture'
+import { TeamMemberItem } from '../TeamMemberItem.tsx/TeamMemberItem'
+
 import styles from './TeamMemberScroll.module.css'
 
 interface TeamMemberScrollProps {
@@ -25,23 +26,7 @@ export function TeamMemberScroll() {
   return (
     <div className={styles['team-member-scroll']}>
       {data!.map((teamMember: TeamMemberScrollProps) => {
-        return (
-          <div key={teamMember.id} className={styles['scrolling-container']}>
-            <Picture
-              width={`270px`}
-              height={`250px`}
-              imgName={teamMember.avatar}
-            />
-            <div className={styles['team-member-text-part']}>
-              <h3 className={styles['team-member-text-part-title']}>
-                {teamMember.name}
-              </h3>
-              <p className={styles['team-member-text-part-subtitle']}>
-                {teamMember.position}
-              </p>
-            </div>
-          </div>
-        )
+        return <TeamMemberItem teamMember={teamMember} />
       })}
     </div>
   )
