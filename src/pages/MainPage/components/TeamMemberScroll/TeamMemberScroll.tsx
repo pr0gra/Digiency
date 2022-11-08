@@ -26,7 +26,7 @@ export function TeamMemberScroll() {
   return (
     <div className={styles['team-member-scroll']}>
       {data!.map((teamMember: TeamMemberScrollProps) => {
-        return <TeamMemberItem teamMember={teamMember} />
+        return <TeamMemberItem key={teamMember.id} teamMember={teamMember} />
       })}
     </div>
   )

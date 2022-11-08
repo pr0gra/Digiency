@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.item-text:hover {
+  color: var(--orange);
+  transition: 0.15s;
+}
+
 .navigation {
   display: none;
 }

@@ -5,6 +5,7 @@ import { Button } from '../../../../components/Button/Button'
 import { basicSchema } from '../../../../../schemas/index'
 import cx from 'classnames'
 import MaskedInput from 'react-text-mask'
+import InputMask from 'react-input-mask'
 
 export function ContactUsForm() {
   const { values, errors, touched, isSubmitting, handleChange, handleSubmit } =
@@ -64,32 +65,15 @@ export function ContactUsForm() {
         </select>
         {errors.subject && touched.subject && <p>{errors.subject}</p>}
 
-        <MaskedInput
-          mask={[
-            '+',
-            /\d/,
-            '(',
-            /[1-9]/,
-            /\d/,
-            /\d/,
-            ')',
-            ' ',
-            /\d/,
-            /\d/,
-            /\d/,
-            '-',
-            /\d/,
-            /\d/,
-            /\d/,
-            /\d/,
-          ]}
-          guide={true}
-          type="text"
+        <InputMask
           className={styles['input']}
+          type="text"
+          mask="+7-(999)-999-9999"
           id="mobile"
           placeholder="Mobile No"
+          value={values.mobile}
           onChange={handleChange}
-        />
+        ></InputMask>
         {errors.mobile && touched.mobile && <p>{errors.mobile}</p>}
 
         <input

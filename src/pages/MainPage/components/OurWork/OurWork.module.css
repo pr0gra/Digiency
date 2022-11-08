@@ -26,6 +26,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 370px);
     justify-content: center;
+    margin-bottom: 120px;
   }
 
   .picture {
@@ -34,6 +35,10 @@
 }
 
 @media (min-width: 1440px) {
+  .our-work {
+    height: 1125px;
+  }
+
   .our-work-images-part {
     grid-template-columns: repeat(3, 370px);
   }

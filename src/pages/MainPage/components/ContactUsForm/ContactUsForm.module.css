@@ -53,6 +53,15 @@
 }
 
 @media (min-width: 767px) {
+  .contact-us-form {
+    justify-content: center;
+  }
+
+  .img {
+    width: 602px;
+    margin: 0;
+  }
+
   .input-desktop {
     grid-column: 1/3;
   }
