@@ -42,10 +42,10 @@ h3 {
 }
 
 h4 {
-  font-family: 'Work Sans';
   color: var(--black);
   font-weight: 400;
   font-size: 16px;
+  font-family: 'Work Sans';
   line-height: 150.6%;
 }
 

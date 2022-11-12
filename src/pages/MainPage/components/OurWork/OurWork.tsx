@@ -38,7 +38,7 @@ export function OurWork() {
             })
           : data!
               .filter((project: ourWorks) => {
-                return project.projectType === projectType
+                return project.project_type === projectType
               })
               .map(project => {
                 return (

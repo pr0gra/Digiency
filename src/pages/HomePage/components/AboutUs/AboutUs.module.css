@@ -1,0 +1,56 @@
+.about-us {
+  padding: 60px 20px;
+  background: var(--orange-background);
+  margin-bottom: 60px;
+}
+
+.img {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  margin-bottom: 22px;
+  color: #ff5300;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 767px) {
+  .about-us {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-top: 120px;
+  }
+
+  .img {
+    max-width: 400px;
+    margin: 0;
+    max-height: 350px;
+  }
+
+  .text-part {
+    max-width: 620px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .img {
+    width: 620px;
+  }
+}

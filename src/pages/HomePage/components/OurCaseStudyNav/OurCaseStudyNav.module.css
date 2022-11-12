@@ -1,0 +1,48 @@
+.our-case-study-nav {
+  margin-bottom: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: initial;
+  overflow-x: auto;
+  list-style-type: none;
+}
+
+.item-button {
+  all: unset;
+  padding: 10px 0;
+}
+
+.active-item-button {
+  width: 100%;
+  text-align: center;
+  background: var(--orange);
+  border-radius: 8px;
+}
+
+@media (min-width: 767px) {
+  .item-button {
+    padding: 15px 50px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .active-item-button {
+    width: initial;
+    background: var(--orange);
+    border-radius: 8px;
+    transition: 0.2s;
+  }
+}
+
+@media (min-width: 1625px) {
+  .list {
+    justify-content: center;
+  }
+}

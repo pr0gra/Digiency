@@ -1,8 +1,56 @@
-.header {
+.visible-navigation-mobile {
+  animation: ease-in-out;
+  animation-name: entered-burger;
+  animation-duration: 0.5s;
+}
+
+.invisible-navigation-mobile {
+  display: none;
+}
+
+.item-text-mobile {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0;
+}
+
+.navigation-mobile {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 50%;
+  list-style-type: none;
+}
+
+@keyframes entered-burger {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.header {
+  display: grid;
   align-items: center;
   justify-content: space-between;
   height: 50px;
+  padding: 0 16px;
+}
+
+.button-text {
+  margin: 0;
+}
+
+.burger-menu-button {
+  all: unset;
+  grid-column: 3;
 }
 
 .digiency-main-logo {
@@ -12,6 +60,7 @@
 
 .theme-icon {
   position: absolute;
+  top: 13px;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -31,9 +80,50 @@
   display: none;
 }
 
+.item-mobile {
+  background-color: white;
+  border-bottom: 1px solid var(--gray-paragraph);
+}
+
+.button {
+  all: unset;
+  position: absolute;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 @media (min-width: 767px) {
   .header {
+    display: flex;
     height: 80px;
+    padding: 0 40px;
+  }
+
+  .img {
+    flex: 1;
+  }
+
+  .button {
+    position: relative;
+    width: 135px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .navigation-mobile {
+    display: none;
+  }
+
+  .burger-menu-button {
+    display: none;
   }
 
   .navigation {
@@ -42,14 +132,16 @@
 
   .theme-icon {
     position: relative;
-    padding: 0;
+    top: 0;
     margin-right: 0;
     margin-left: 0;
+    padding: 0;
   }
 
   .list {
-    gap: 25px;
     display: flex;
+    gap: 15px;
+    align-items: center;
     list-style-type: none;
   }
 
@@ -59,12 +151,21 @@
 }
 
 @media (min-width: 1440px) {
-  .header {
-    padding: 0 135px;
+  .item-text-mobile,
+  item-text {
+    font-weight: 500;
   }
 
   .digiency-main-logo {
     width: 162px;
     height: 48px;
+  }
+
+  .list {
+    gap: 25px;
+  }
+
+  .header {
+    padding: 0 175px;
   }
 }

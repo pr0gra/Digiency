@@ -7,3 +7,9 @@
     padding: 0 40px;
   }
 }
+
+@media (min-width: 1440px) {
+  .layout {
+    padding: 0 135px;
+  }
+}

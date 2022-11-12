@@ -23,6 +23,7 @@
 }
 
 .our-experience-array-part {
+  justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -49,9 +50,15 @@
     padding: 60px 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .our-experience-text-part {
+    max-width: 570px;
   }
 
   .our-experience-array-part {
+    flex: 0;
     gap: 8px;
   }
 

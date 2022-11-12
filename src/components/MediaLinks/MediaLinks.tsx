@@ -23,9 +23,9 @@ export function MediaLinks({
 }: Props) {
   return (
     <div className={styles['media-links']} {...rest}>
-      {/* <a className={styles['link']} href="https://www.google.ru/">
+      <a className={styles['link']} href="https://www.google.ru/">
         <img className={styles['img']} src={facebookLogo} alt="" />
-      </a> */}
+      </a>
       <a className={styles['link']} href={instLink}>
         <img className={styles['img']} src={instLogo} alt="" />
       </a>

@@ -1,22 +1,10 @@
-import { useGetTeamMembersQuery } from '../../../../../redux/digiencyApi'
+import {
+  ITeamMembers,
+  useGetTeamMembersQuery,
+} from '../../../../../redux/digiencyApi'
 import { TeamMemberItem } from '../TeamMemberItem.tsx/TeamMemberItem'
 
 import styles from './TeamMemberScroll.module.css'
-
-interface TeamMemberScrollProps {
-  id: number
-  avatar: string
-  name: string
-  position: string
-  links: Links
-}
-
-interface Links {
-  facebook: string
-  instagram: string
-  twitter: string
-  skype: string
-}
 
 export function TeamMemberScroll() {
   const { data, isLoading, isError } = useGetTeamMembersQuery()
@@ -25,7 +13,7 @@ export function TeamMemberScroll() {
 
   return (
     <div className={styles['team-member-scroll']}>
-      {data!.map((teamMember: TeamMemberScrollProps) => {
+      {data!.map((teamMember: ITeamMembers) => {
         return <TeamMemberItem key={teamMember.id} teamMember={teamMember} />
       })}
     </div>

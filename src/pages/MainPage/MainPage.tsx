@@ -13,9 +13,8 @@ import { FooterBottom } from '../../components/FooterBottom/FooterBottom'
 export function MainPage() {
   return (
     <>
-      <Layout>
-        <Header />
-      </Layout>
+      <Header />
+
       <MainHero />
       <Layout>
         <AboutUs />
