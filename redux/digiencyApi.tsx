@@ -7,7 +7,7 @@ export interface teamMembersLinks {
   skype: string
 }
 
-export interface teamMembers {
+export interface ITeamMembers {
   id: number
   avatar: string
   name: string
@@ -15,13 +15,13 @@ export interface teamMembers {
   links: teamMembersLinks
 }
 
-export interface ourWorks {
+export interface IOurWorks {
   id: number
-  projectType: string
+  project_type: string
   img: string
 }
 
-export interface clientsFeedback {
+export interface IClientsFeedback {
   id: number
   avatar: string
   name: string
@@ -29,18 +29,27 @@ export interface clientsFeedback {
   comment: string
 }
 
+export interface IOurCaseStudy {
+  id: number
+  img: string
+  project_type: string
+}
+
 export const digiencyApi = createApi({
   reducerPath: 'digiencyApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004' }),
   endpoints: build => ({
-    getTeamMembers: build.query<teamMembers[], void>({
+    getTeamMembers: build.query<ITeamMembers[], void>({
       query: () => `teamMembers`,
     }),
-    getOurWorks: build.query<ourWorks[], void>({
+    getOurWorks: build.query<IOurWorks[], void>({
       query: () => `ourWorks`,
     }),
-    getClientsFeedback: build.query<clientsFeedback[], void>({
+    getClientsFeedback: build.query<IClientsFeedback[], void>({
       query: () => `clientsFeedback`,
+    }),
+    getOurCaseStudyImages: build.query<IOurCaseStudy[], void>({
+      query: () => `ourCaseStudy`,
     }),
   }),
 })
@@ -49,4 +58,5 @@ export const {
   useGetTeamMembersQuery,
   useGetOurWorksQuery,
   useGetClientsFeedbackQuery,
+  useGetOurCaseStudyImagesQuery,
 } = digiencyApi

@@ -52,32 +52,32 @@
   "ourWorks": [
     {
       "id": 1,
-      "projectType": "Graphic Design",
+      "project_type": "Graphic Design",
       "img": "our-work-img-1"
     },
     {
       "id": 2,
-      "projectType": "UI/UX Design",
+      "project_type": "UI/UX Design",
       "img": "our-work-img-2"
     },
     {
       "id": 3,
-      "projectType": "Web Development",
+      "project_type": "Web Development",
       "img": "our-work-img-3"
     },
     {
       "id": 4,
-      "projectType": "UI/UX Design",
+      "project_type": "UI/UX Design",
       "img": "our-work-img-4"
     },
     {
       "id": 5,
-      "projectType": "Web Development",
+      "project_type": "Web Development",
       "img": "our-work-img-5"
     },
     {
       "id": 6,
-      "projectType": "Graphic Design",
+      "project_type": "Graphic Design",
       "img": "our-work-img-6"
     }
   ],
@@ -100,6 +100,99 @@
       "id": 3,
       "avatar": "clients-feedback-jason-vurhis-avatar.jpg",
       "name": "Jason Vurhis",
+      "position": "UI/UX Designer",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+    },
+    {
+      "id": 4,
+      "avatar": "clients-feedback-demis-karibidis-avatar.jpg",
+      "name": "Demis karibidis",
+      "position": "Web Developer",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+    },
+    {
+      "id": 5,
+      "avatar": "clients-feedback-jhony-dep-avatar.jpg",
+      "name": "Jony Dep",
+      "position": "Graphic Designer",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+    },
+    {
+      "id": 6,
+      "avatar": "clients-feedback-sergey-shuklin-avatar.jpg",
+      "name": "Sergey Shuklin",
+      "position": "Frontend Developer",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+    }
+  ],
+
+  "ourCaseStudy": [
+    {
+      "id": 1,
+      "img": "our-case-study-image-1",
+      "project_type": "UX Design"
+    },
+    {
+      "id": 2,
+      "img": "our-case-study-image-2",
+      "project_type": "UX Design"
+    },
+    {
+      "id": 3,
+      "img": "our-case-study-image-3",
+      "project_type": "Web Design"
+    },
+    {
+      "id": 4,
+      "img": "our-case-study-image-4",
+      "project_type": "Web Design"
+    },
+    {
+      "id": 5,
+      "img": "our-case-study-image-5",
+      "project_type": "App Development"
+    },
+    {
+      "id": 6,
+      "img": "our-case-study-image-6",
+      "project_type": "App Development"
+    },
+    {
+      "id": 7,
+      "img": "our-case-study-image-7",
+      "project_type": "Game Design"
+    },
+    {
+      "id": 8,
+      "img": "our-case-study-image-8",
+      "project_type": "Game Design"
+    },
+    {
+      "id": 9,
+      "img": "our-case-study-image-9",
+      "project_type": "Graphic Design"
+    }
+  ],
+
+  "ourTestimonial": [
+    {
+      "id": 1,
+      "avatar": "clients-feedback-justin-septimus-avatar.svg",
+      "name": "Phillip Levin",
+      "position": "CEO,word yt",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+    },
+    {
+      "id": 2,
+      "avatar": "clients-feedback-ashlynn-gouse-avatar.svg",
+      "name": "Lincoln Lipshutz",
+      "position": "Managing Director",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+    },
+    {
+      "id": 3,
+      "avatar": "clients-feedback-jason-vurhis-avatar.jpg",
+      "name": "Craig Siphron",
       "position": "UI/UX Designer",
       "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
     },
