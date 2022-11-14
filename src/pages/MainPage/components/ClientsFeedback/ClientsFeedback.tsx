@@ -1,10 +1,4 @@
 import styles from './ClientsFeedback.module.css'
-import { Pagination, A11y } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
 import { useGetClientsFeedbackQuery } from '../../../../../redux'
 
 export function ClientsFeedback() {
@@ -27,40 +21,31 @@ export function ClientsFeedback() {
         </h2>
       </div>
       <div className={styles['clients-feedback-scroll-part']}>
-        <Swiper
-          modules={[Pagination, A11y]}
-          spaceBetween={100}
-          slidesPerView={2}
-          pagination={{ clickable: true }}
-          onSwiper={swiper => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-        >
-          {data!.map(client => {
-            return (
-              <SwiperSlide key={client.id}>
-                <img
-                  className={styles['feedback-img']}
-                  src={`/src/assets/images/${client.avatar}`}
-                  alt=""
-                />
-                <div className={styles['feedback-container']}>
-                  <div className={styles['feedback-container-text-part']}>
-                    <p className={styles['clients-feedback-text-name']}>
-                      {client.name}
-                    </p>
-                    <p className={styles['clients-feedback-text-positon']}>
-                      {client.position}
-                    </p>
+        {data!.map(client => {
+          return (
+            <div className={styles['client']}>
+              <img
+                className={styles['feedback-img']}
+                src={`/src/assets/images/${client.avatar}`}
+                alt=""
+              />
+              <div className={styles['feedback-container']}>
+                <div className={styles['feedback-container-text-part']}>
+                  <p className={styles['clients-feedback-text-name']}>
+                    {client.name}
+                  </p>
+                  <p className={styles['clients-feedback-text-positon']}>
+                    {client.position}
+                  </p>
 
-                    <p className={styles['clients-feedback-text']}>
-                      {client.comment}
-                    </p>
-                  </div>
+                  <p className={styles['clients-feedback-text']}>
+                    {client.comment}
+                  </p>
                 </div>
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

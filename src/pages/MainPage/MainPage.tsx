@@ -24,7 +24,7 @@ export function MainPage() {
         <TeamMember />
         <OurWork />
       </Layout>
-      <ClientsFeedback />
+      {/* <ClientsFeedback /> */}
       <Layout>
         <ContactUs />
       </Layout>

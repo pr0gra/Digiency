@@ -11,6 +11,7 @@
     "start-server": "json-server --watch server/db.json --port 3004"
   },
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.2",
     "@reduxjs/toolkit": "^1.8.6",
     "classnames": "^2.3.2",
     "formik": "^2.2.9",

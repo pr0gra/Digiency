@@ -1,8 +1,4 @@
-import {
-  IOurBlog,
-  OurBlogQuery,
-  useGetOurBlogsQuery,
-} from '../../../../../redux'
+import { useGetOurBlogsQuery } from '../../../../../redux'
 import { Picture } from '../../../../components/Picture/Picture'
 import styles from './OurBlogMain.module.css'
 import timerIcon from '../../../../assets/icons/our-blog-timer.svg'

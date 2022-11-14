@@ -53,11 +53,6 @@ export interface IOurBlog {
   content: string
 }
 
-export interface OurBlogQuery {
-  total_count: number
-  articles: IOurBlog[]
-}
-
 export const digiencyApi = createApi({
   reducerPath: 'digiencyApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004' }),
@@ -77,7 +72,7 @@ export const digiencyApi = createApi({
     getOurTestimonial: build.query<IOurTestimonial[], void>({
       query: () => `our_testimonial`,
     }),
-    getOurBlogs: build.query<OurBlogQuery, number>({
+    getOurBlogs: build.query<IOurBlog[], number>({
       query: currentPage => {
         return {
           url: `blog_posts/?_limit=${5}&_page=${currentPage}`,

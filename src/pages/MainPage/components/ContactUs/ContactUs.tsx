@@ -3,6 +3,11 @@ import mailIcon from '../../../../assets/icons/contact-us-mail-icon.svg'
 import phoneIcon from '../../../../assets/icons/contact-us-phone-icon.svg'
 import locationIcon from '../../../../assets/icons/contact-us-location-icon.svg'
 import { ContactUsForm } from '../ContactUsForm/ContactUsForm'
+import MapComponent from '../Map/MapComponent'
+import gradeImg1 from '../../../../assets/images/contact-us-grade-1.svg'
+import gradeImg2 from '../../../../assets/images/contact-us-grade-2.svg'
+import gradeImg3 from '../../../../assets/images/contact-us-grade-3.svg'
+import gradeImg4 from '../../../../assets/images/contact-us-grade-4.svg'
 
 export function ContactUs() {
   return (
@@ -82,6 +87,13 @@ export function ContactUs() {
         </div>
       </div>
       <ContactUsForm />
+      <MapComponent />
+      <div className={styles['grades-array']}>
+        <img className={styles['grades-array-img']} src={gradeImg1} alt="" />
+        <img className={styles['grades-array-img']} src={gradeImg2} alt="" />
+        <img className={styles['grades-array-img']} src={gradeImg3} alt="" />
+        <img className={styles['grades-array-img']} src={gradeImg4} alt="" />
+      </div>
     </div>
   )
 }

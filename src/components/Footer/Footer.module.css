@@ -69,7 +69,7 @@ a {
   padding-bottom: 50px;
 }
 
-.input {
+.form-input {
   width: 100%;
 }
 
@@ -98,9 +98,17 @@ a {
 }
 
 @media (min-width: 767px) {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    align-items: center;
+  }
+
   .footer {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .text {
@@ -113,5 +121,15 @@ a {
 
   .nav-container {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .media-part {
+    max-width: 263px;
+  }
+
+  .nav-form-container {
+    max-width: 389px;
   }
 }
