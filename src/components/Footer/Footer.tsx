@@ -1,9 +1,5 @@
 import styles from './Footer.module.css'
 import mainLogo from '../../assets/icons/digiency-footer.svg'
-import facebookLogo from '../../assets/icons/facebook-fill.svg'
-import instLogo from '../../assets/icons/instagram-fill.svg'
-import twitterLogo from '../../assets/icons/twitter-fill.svg'
-import skypeLogo from '../../assets/icons/skype-fill.svg'
 import planeIcon from '../../assets/icons/plane-icon.svg'
 import { MediaLinks } from '../MediaLinks/MediaLinks'
 

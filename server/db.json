@@ -1,5 +1,5 @@
 {
-  "teamMembers": [
+  "team_members": [
     {
       "id": 1,
       "avatar": "team-member-ui-ux-designer",
@@ -49,7 +49,7 @@
       }
     }
   ],
-  "ourWorks": [
+  "our_works": [
     {
       "id": 1,
       "project_type": "Graphic Design",
@@ -81,7 +81,7 @@
       "img": "our-work-img-6"
     }
   ],
-  "clientsFeedback": [
+  "clients_feedback": [
     {
       "id": 1,
       "avatar": "clients-feedback-justin-septimus-avatar.svg",
@@ -126,7 +126,7 @@
     }
   ],
 
-  "ourCaseStudy": [
+  "our_case_study": [
     {
       "id": 1,
       "img": "our-case-study-image-1",
@@ -174,48 +174,136 @@
     }
   ],
 
-  "ourTestimonial": [
+  "our_testimonial": [
     {
       "id": 1,
-      "avatar": "clients-feedback-justin-septimus-avatar.svg",
+      "avatar": "our-testimonial-craig-siphron-avatar.svg",
       "name": "Phillip Levin",
       "position": "CEO,word yt",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum.",
+      "rating": 4.5
     },
     {
       "id": 2,
-      "avatar": "clients-feedback-ashlynn-gouse-avatar.svg",
+      "avatar": "our-testimonial-lincoln-lipshutz-avatar.svg",
       "name": "Lincoln Lipshutz",
       "position": "Managing Director",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum.",
+      "rating": 4.5
     },
     {
       "id": 3,
-      "avatar": "clients-feedback-jason-vurhis-avatar.jpg",
+      "avatar": "our-testimonial-philip-levin-avatar.svg",
       "name": "Craig Siphron",
       "position": "UI/UX Designer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum.",
+      "rating": 4.5
     },
     {
       "id": 4,
-      "avatar": "clients-feedback-demis-karibidis-avatar.jpg",
+      "avatar": "our-testimonial-craig-siphron-avatar.svg",
       "name": "Demis karibidis",
       "position": "Web Developer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum.",
+      "rating": 5
     },
     {
       "id": 5,
-      "avatar": "clients-feedback-jhony-dep-avatar.jpg",
+      "avatar": "our-testimonial-philip-levin-avatar.svg",
       "name": "Jony Dep",
       "position": "Graphic Designer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum.",
+      "rating": 4
     },
     {
       "id": 6,
-      "avatar": "clients-feedback-sergey-shuklin-avatar.jpg",
+      "avatar": "our-testimonial-lincoln-lipshutz-avatar.svg",
       "name": "Sergey Shuklin",
       "position": "Frontend Developer",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum."
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum.",
+      "rating": 4.5
+    }
+  ],
+  "blog_posts": [
+    {
+      "id": 1,
+      "img": "our-blog-1",
+      "title": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 2,
+      "img": "our-blog-2",
+      "title": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "created_at": "February 11, 1072",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 3,
+      "img": "our-blog-3",
+      "title": "Memphis Design: the defining look of the 1980s",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 4,
+      "img": "our-blog-4",
+      "title": "These 3 tips helped RollWorks find the perfect designer on 99designs",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 5,
+      "img": "our-blog-5",
+      "title": "What is Design Thinking and how does it create innovation?",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 6,
+      "img": "our-blog-3",
+      "title": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 7,
+      "img": "our-blog-4",
+      "title": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "created_at": "February 11, 2072",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 8,
+      "img": "our-blog-5",
+      "title": "Memphis Design: the defining look of the 1980s",
+      "created_at": "January 25, 2022",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 9,
+      "img": "our-blog-2",
+      "title": "These 3 tips helped RollWorks find the perfect designer on 99designs",
+      "created_at": "January 25, 2022",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 10,
+      "img": "our-blog-1",
+      "title": "What is Design Thinking and how does it create innovation?",
+      "created_at": "January 25, 2022",
+      "author": "Cristofer Westervelt",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
     }
   ]
 }

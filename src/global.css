@@ -18,6 +18,10 @@ input[type='text'] {
   font-family: 'Work Sans';
 }
 
+li {
+  list-style-type: none;
+}
+
 div {
   flex: 1;
 }

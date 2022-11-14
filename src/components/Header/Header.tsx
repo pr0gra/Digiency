@@ -70,9 +70,9 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
           </a>
         </li>
         <li className={styles['item-mobile']}>
-          <a className={styles['item-link-mobile']}>
+          <Link to="/blog" className={styles['item-link-mobile']}>
             <h4 className={styles['item-text-mobile']}>Our Blog</h4>
-          </a>
+          </Link>
         </li>
         <li className={styles['item-mobile']}>
           <a className={styles['item-link-mobile']}>
@@ -112,9 +112,9 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
             </a>
           </li>
           <li className={styles['item']}>
-            <a className={styles['item-link']}>
+            <Link to="/blog" className={styles['item-link']}>
               <h4 className={styles['item-text']}>Our Blog</h4>
-            </a>
+            </Link>
           </li>
           <li className={styles['item']}>
             <a className={styles['item-link']}>

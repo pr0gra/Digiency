@@ -4,7 +4,6 @@ import { useFormik } from 'formik'
 import { Button } from '../../../../components/Button/Button'
 import { basicSchema } from '../../../../../schemas/index'
 import cx from 'classnames'
-import MaskedInput from 'react-text-mask'
 import InputMask from 'react-input-mask'
 
 export function ContactUsForm() {

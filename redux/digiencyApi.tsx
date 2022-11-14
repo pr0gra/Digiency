@@ -35,21 +35,54 @@ export interface IOurCaseStudy {
   project_type: string
 }
 
+export interface IOurTestimonial {
+  id: number
+  avatar: string
+  name: string
+  position: string
+  comment: string
+  rating: number
+}
+
+export interface IOurBlog {
+  id: 1
+  img: string
+  title: string
+  created_at: string
+  author: string
+  content: string
+}
+
+export interface OurBlogQuery {
+  total_count: number
+  articles: IOurBlog[]
+}
+
 export const digiencyApi = createApi({
   reducerPath: 'digiencyApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004' }),
   endpoints: build => ({
     getTeamMembers: build.query<ITeamMembers[], void>({
-      query: () => `teamMembers`,
+      query: () => `team_members`,
     }),
     getOurWorks: build.query<IOurWorks[], void>({
-      query: () => `ourWorks`,
+      query: () => `our_works`,
     }),
     getClientsFeedback: build.query<IClientsFeedback[], void>({
-      query: () => `clientsFeedback`,
+      query: () => `clients_feedback`,
     }),
-    getOurCaseStudyImages: build.query<IOurCaseStudy[], void>({
-      query: () => `ourCaseStudy`,
+    getOurCaseStudy: build.query<IOurCaseStudy[], void>({
+      query: () => `our_case_study`,
+    }),
+    getOurTestimonial: build.query<IOurTestimonial[], void>({
+      query: () => `our_testimonial`,
+    }),
+    getOurBlogs: build.query<OurBlogQuery, number>({
+      query: currentPage => {
+        return {
+          url: `blog_posts/?_limit=${5}&_page=${currentPage}`,
+        }
+      },
     }),
   }),
 })
@@ -58,5 +91,7 @@ export const {
   useGetTeamMembersQuery,
   useGetOurWorksQuery,
   useGetClientsFeedbackQuery,
-  useGetOurCaseStudyImagesQuery,
+  useGetOurCaseStudyQuery,
+  useGetOurTestimonialQuery,
+  useGetOurBlogsQuery,
 } = digiencyApi

@@ -1,8 +1,5 @@
 import { useState } from 'react'
-import {
-  IOurCaseStudy,
-  useGetOurCaseStudyImagesQuery,
-} from '../../../../../redux'
+import { IOurCaseStudy, useGetOurCaseStudyQuery } from '../../../../../redux'
 import { Picture } from '../../../../components/Picture/Picture'
 import { OurCaseStudyNav } from '../OurCaseStudyNav/OurCaseStudyNav'
 import styles from './OurCaseStudy.module.css'
@@ -11,8 +8,7 @@ import hoverIcon from '../../../../assets/icons/about-us-vector-icon.svg'
 export function OurCaseStudy() {
   const [onMouseEnterId, setOnMouseEnterId] = useState(0)
   const [projectType, setProjectType] = useState('All')
-  const { data, isLoading, isError } = useGetOurCaseStudyImagesQuery()
-  console.log(projectType)
+  const { data, isLoading, isError } = useGetOurCaseStudyQuery()
 
   if (isLoading) {
     return <h2>Loading</h2>
