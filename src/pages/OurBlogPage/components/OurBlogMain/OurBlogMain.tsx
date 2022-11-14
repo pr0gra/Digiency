@@ -11,9 +11,11 @@ import messageIcon from '../../../../assets/icons/our-blog-message.svg'
 import { Button } from '../../../../components/Button/Button'
 import { useState } from 'react'
 import { SearchPart } from '../SearchPart/SearchPart'
+import cx from 'classnames'
 
 export function OurBlogMain() {
   const [currentPage, setCurrentPage] = useState(1)
+  const [activeButton, setActiveButton] = useState(0)
 
   const { data, isLoading, isError } = useGetOurBlogsQuery(currentPage)
   if (isLoading) return <h1>loading</h1>
@@ -76,12 +78,21 @@ export function OurBlogMain() {
             return (
               <button
                 key={index}
-                className={styles['pagination-number-button']}
+                className={cx(
+                  styles['pagination-number-button'],
+                  index === activeButton && styles['active-button'],
+                )}
                 onClick={e => {
                   setCurrentPage(number)
+                  setActiveButton(index)
                 }}
               >
-                <h2 className={styles['pagination-number']}>
+                <h2
+                  className={cx(
+                    styles['pagination-number'],
+                    index === activeButton && styles['active-text'],
+                  )}
+                >
                   {number < 10 ? `0${number}` : number}
                 </h2>
               </button>

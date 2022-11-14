@@ -18,7 +18,7 @@ export function SearchPart() {
         <img src={searchInput} alt="" />
       </div>
       <ul className={styles['latest-post-container']}>
-        {/* <h2 className={styles['title']}>Letest Post</h2> */}
+        <h2 className={styles['title']}>Letest Post</h2>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon1} alt="" />
           <h3 className={styles['post-title']}>
@@ -31,7 +31,9 @@ export function SearchPart() {
         </li>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon3} alt="" />
-          <h3 className={styles['title']}>Best 27 Design Blogs for 2021</h3>
+          <h3 className={styles['post-title']}>
+            Best 27 Design Blogs for 2021
+          </h3>
         </li>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon4} alt="" />
@@ -48,7 +50,7 @@ export function SearchPart() {
       </ul>
       <div className={styles['categories-container']}>
         <h2 className={styles['title']}>Categories</h2>
-        <ul className={styles['category-list']}>
+        <ul className={styles['categories-list']}>
           <li className={styles['category']}>
             <h3 className={styles['category-title']}>Business</h3>
             <h3 className={styles['category-number']}>05</h3>

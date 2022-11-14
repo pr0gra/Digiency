@@ -69,6 +69,10 @@ a {
   padding-bottom: 50px;
 }
 
+.input {
+  width: 100%;
+}
+
 .form-button {
   all: unset;
   padding: 20px 30px;

@@ -9,6 +9,10 @@
   --white: #fff;
 }
 
+* {
+  flex-shrink: initial;
+}
+
 @font-face {
   font-family: 'Work Sans';
   src: url('./assets/fonts/WorkSans-Regular.woff2');

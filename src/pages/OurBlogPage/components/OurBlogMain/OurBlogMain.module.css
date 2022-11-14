@@ -35,10 +35,31 @@
   all: unset;
   padding: 8px;
   border: 1px solid #ff5300;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-button {
+  background: #ff5300;
+}
+
+.active-text {
+  color: #fff;
 }
 
 .pagination {
   justify-content: center;
   display: flex;
   gap: 20px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 767px) {
+  .our-blog-main {
+    display: flex;
+    gap: 24px;
+  }
 }
