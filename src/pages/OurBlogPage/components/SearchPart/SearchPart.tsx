@@ -8,7 +8,7 @@ import searchInput from '../../../../assets/icons/search-icon.svg'
 
 export function SearchPart() {
   return (
-    <div className={styles['seacrh-part']}>
+    <div className={styles['search-part']}>
       <div className={styles['input-part']}>
         <input
           placeholder="Search here..."

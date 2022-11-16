@@ -20,6 +20,7 @@ export function OurBlogMain() {
     let paginationButtons = []
     let articleBlockNumber = 0
     while (articleBlockNumber < Math.ceil(10 / 5)) {
+      //косяк
       articleBlockNumber += 1
       paginationButtons.push(articleBlockNumber)
     }
