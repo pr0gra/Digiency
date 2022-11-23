@@ -51,6 +51,7 @@ export interface IOurBlog {
   created_at: string
   author: string
   content: string
+  type: string
 }
 
 export const digiencyApi = createApi({
@@ -79,6 +80,9 @@ export const digiencyApi = createApi({
         }
       },
     }),
+    getAllPosts: build.query<IOurBlog[], void>({
+      query: () => `blog_posts`,
+    }),
   }),
 })
 
@@ -89,4 +93,5 @@ export const {
   useGetOurCaseStudyQuery,
   useGetOurTestimonialQuery,
   useGetOurBlogsQuery,
+  useGetAllPostsQuery,
 } = digiencyApi
