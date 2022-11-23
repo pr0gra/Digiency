@@ -14,7 +14,6 @@ export function MainPage() {
   return (
     <>
       <Header />
-
       <MainHero />
       <Layout>
         <AboutUs />
