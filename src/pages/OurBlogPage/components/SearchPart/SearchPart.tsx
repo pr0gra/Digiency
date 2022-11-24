@@ -24,12 +24,12 @@ export function SearchPart({ setSearchText }: Props) {
         className={styles['input-part']}
       >
         <input
-          placeholder="Search here..."
-          className={styles['input']}
-          type="text"
           onChange={e => {
             setInputValue(e.target.value)
           }}
+          placeholder="Search here..."
+          className={styles['input']}
+          type="text"
         />
         <img src={searchInput} alt="" />
       </form>
