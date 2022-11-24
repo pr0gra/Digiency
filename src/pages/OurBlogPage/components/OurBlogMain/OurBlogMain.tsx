@@ -13,21 +13,15 @@ import { Link } from 'react-router-dom'
 export function OurBlogMain() {
   const [currentPage, setCurrentPage] = useState(1)
   const [activeButton, setActiveButton] = useState(0)
+  const [searchText, setSearchText] = useState('')
 
-  const { data, isLoading, isError } = useGetOurBlogsQuery(currentPage)
+  const { data, isLoading, isError } = useGetOurBlogsQuery({
+    currentPage,
+    searchText,
+  })
   if (isLoading) return <h1>loading</h1>
   if (isError) return <h1>Error</h1>
-  function getPaginationNumberArray() {
-    let paginationButtons = []
-    let articleBlockNumber = 0
-    while (articleBlockNumber < Math.ceil(10 / 5)) {
-      //косяк
-      articleBlockNumber += 1
-      paginationButtons.push(articleBlockNumber)
-    }
-    return paginationButtons
-  }
-
+  console.log(data)
   return (
     <div className={styles['our-blog-main']}>
       <div className={styles['articles-part']}>
@@ -73,34 +67,9 @@ export function OurBlogMain() {
             </div>
           )
         })}{' '}
-        <div className={styles['pagination']}>
-          {getPaginationNumberArray().map((number, index) => {
-            return (
-              <button
-                key={index}
-                className={cx(
-                  styles['pagination-number-button'],
-                  index === activeButton && styles['active-button'],
-                )}
-                onClick={e => {
-                  setCurrentPage(number)
-                  setActiveButton(index)
-                }}
-              >
-                <h2
-                  className={cx(
-                    styles['pagination-number'],
-                    index === activeButton && styles['active-text'],
-                  )}
-                >
-                  {number < 10 ? `0${number}` : number}
-                </h2>
-              </button>
-            )
-          })}
-        </div>
+        <div className={styles['pagination']}></div>
       </div>
-      <SearchPart />
+      <SearchPart setSearchText={setSearchText} />
     </div>
   )
 }

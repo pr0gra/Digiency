@@ -73,10 +73,14 @@ export const digiencyApi = createApi({
     getOurTestimonial: build.query<IOurTestimonial[], void>({
       query: () => `our_testimonial`,
     }),
-    getOurBlogs: build.query<IOurBlog[], number>({
-      query: currentPage => {
+    getOurBlogs: build.query<
+      IOurBlog[],
+      { currentPage: number; searchText: string }
+    >({
+      query: args => {
+        const { currentPage, searchText } = args
         return {
-          url: `blog_posts/?_limit=${5}&_page=${currentPage}`,
+          url: `blog_posts?_limit=5&_page=${currentPage}&title_like=${searchText}`,
         }
       },
     }),
