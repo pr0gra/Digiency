@@ -6,6 +6,12 @@
   margin-bottom: 20px;
 }
 
+.our-blog-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .link {
   padding: 12px 20px;
   color: white;
@@ -71,6 +77,8 @@
 @media (min-width: 767px) {
   .our-blog-main {
     display: flex;
+    flex-direction: row;
+    align-items: initial;
     gap: 24px;
   }
 }

@@ -11,13 +11,15 @@
 }
 
 @media (min-width: 767px) {
-  .our-blog-hero {
+  .blog-hero {
     margin-bottom: 60px;
+    padding: 108px 110px;
   }
 }
 
 @media (min-width: 1440px) {
-  .our-blog-hero {
+  .blog-hero {
+    padding: 108px 304px;
     margin-bottom: 120px;
   }
 }

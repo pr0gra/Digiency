@@ -52,6 +52,7 @@ export interface IOurBlog {
   author: string
   content: string
   type: string
+  full_content: string
 }
 
 export const digiencyApi = createApi({
