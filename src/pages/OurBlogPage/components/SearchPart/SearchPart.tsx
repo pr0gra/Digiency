@@ -5,18 +5,34 @@ import postIcon3 from '../../../../assets/icons/latest-post-icon-3.svg'
 import postIcon4 from '../../../../assets/icons/latest-post-icon-4.svg'
 import postIcon5 from '../../../../assets/icons/latest-post-icon-5.svg'
 import searchInput from '../../../../assets/icons/search-icon.svg'
+import { useState } from 'react'
 
-export function SearchPart() {
+interface Props {
+  setSearchText: React.Dispatch<React.SetStateAction<string>>
+}
+
+export function SearchPart({ setSearchText }: Props) {
+  const [inputValue, setInputValue] = useState('')
+
   return (
     <div className={styles['search-part']}>
-      <div className={styles['input-part']}>
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          setSearchText(inputValue)
+        }}
+        className={styles['input-part']}
+      >
         <input
+          onChange={e => {
+            setInputValue(e.target.value)
+          }}
           placeholder="Search here..."
           className={styles['input']}
           type="text"
         />
         <img src={searchInput} alt="" />
-      </div>
+      </form>
       <ul className={styles['latest-post-container']}>
         <h2 className={styles['title']}>Letest Post</h2>
         <li className={styles['latest-post']}>

@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom'
-import { useGetAllPostsQuery } from '../../../../../redux'
+import { IOurBlog } from '../../../../../redux'
+
 import { BlogHero } from '../../../../components/BlogHero/BlogHero'
 import styles from './ArticleHero.module.css'
+
 
 export function ArticleHero() {
   const { id } = useParams()

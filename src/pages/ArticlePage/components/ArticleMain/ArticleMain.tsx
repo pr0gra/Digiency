@@ -1,15 +1,12 @@
-import { useGetAllPostsQuery } from '../../../../../redux'
+import { IOurBlog } from '../../../../../redux'
 import { SearchPart } from '../../../OurBlogPage/components/SearchPart/SearchPart'
 import styles from './ArticleMain.module.css'
 
-export function ArticleMain() {
-  const { data, isLoading, isError } = useGetAllPostsQuery()
-  if (isLoading) {
-    return <h1>isLoading</h1>
-  }
-  if (isError) {
-    return <h1>isLoading</h1>
-  }
+interface Props {
+  data?: IOurBlog[]
+}
+
+export function ArticleMain({ data }: Props) {
   return (
     <div className={styles['article-main']}>
       <SearchPart />
