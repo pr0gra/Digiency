@@ -4,15 +4,14 @@ import { BlogHero } from '../../../../components/BlogHero/BlogHero'
 import styles from './ArticleHero.module.css'
 
 export function ArticleHero() {
+  const { id } = useParams()
   const { data, isLoading, isError } = useGetAllPostsQuery()
   if (isLoading) {
     return <h1>isLoading</h1>
   }
   if (isError) {
-    return <h1>isLoading</h1>
+    return <h1>isError</h1>
   }
-
-  const { id } = useParams()
 
   const currentArticle = data!.filter(post => {
     return post.id === parseInt(id!)
