@@ -19,7 +19,7 @@ export function Picture({ children, style, imgName, ...rest }: Props) {
       {children}
       <source srcSet={imgAvif} type="image/avif" />
       <source srcSet={imgWebp} type="image/webp" />
-      <img className={style} src={imgJpg} alt="img" />
+      <img src={imgJpg} alt="img" />
     </picture>
   )
 }

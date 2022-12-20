@@ -2,7 +2,7 @@ import {
   ITeamMembers,
   useGetTeamMembersQuery,
 } from '../../../../../redux/digiencyApi'
-import { TeamMemberItem } from '../TeamMemberItem.tsx/TeamMemberItem'
+import { TeamMemberItem } from '../TeamMemberItem/TeamMemberItem'
 
 import styles from './TeamMemberScroll.module.css'
 

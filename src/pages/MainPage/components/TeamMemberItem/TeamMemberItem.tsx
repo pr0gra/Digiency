@@ -15,6 +15,7 @@ export function TeamMemberItem({ teamMember }: TeamMemberItemProps) {
     <>
       <div key={teamMember.id} className={styles['scrolling-container']}>
         <Picture
+          style={{ width: '270px', height: '250px' }}
           className={styles['picture']}
           onMouseEnter={() => setShowingHoverContent(true)}
           onMouseLeave={() => setShowingHoverContent(false)}
