@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import { HOST } from '../src/constants/endpoints/endpoints'
 import { IOurBlog } from './digiencyApi'
 
 function parseLinkHeader(linkHeader: any) {
@@ -32,9 +33,7 @@ export const fetchArticles = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >('articles/fetchArticles', async function (_, { rejectWithValue }) {
-  const response = await fetch(
-    'http://localhost:3004/blog_posts?_limit=5&_page=1',
-  )
+  const response = await fetch(`${HOST}/blog_posts?_limit=5&_page=1`)
   const data = await response.json()
 
   if (!response.ok) {
