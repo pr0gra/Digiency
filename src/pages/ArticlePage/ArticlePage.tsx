@@ -12,6 +12,7 @@ export function ArticlePage() {
   if (isError) {
     return <h1>isLoading</h1>
   }
+
   return (
     <>
       <Header />

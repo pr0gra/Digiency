@@ -52,6 +52,7 @@ export interface IOurBlog {
   author: string
   content: string
   type: string
+  full_content: string
 }
 
 export const digiencyApi = createApi({
@@ -79,6 +80,7 @@ export const digiencyApi = createApi({
     >({
       query: args => {
         const { currentPage, searchText } = args
+
         return {
           url: `blog_posts?_limit=5&_page=${currentPage}&title_like=${searchText}`,
         }

@@ -30,6 +30,11 @@
   display: none;
 }
 
+.picture img {
+  width: 270px;
+  height: 250px;
+}
+
 .picture {
   height: 250px;
   width: 270px;
