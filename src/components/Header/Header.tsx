@@ -38,8 +38,8 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
       <ul
         className={cx(
           menuVisible
-            ? styles['visible-navigation-mobile']
-            : styles['invisible-navigation-mobile'],
+            ? styles['animated-navigation-mobile']
+            : styles['visible-navigation-mobile'],
           styles['navigation-mobile'],
         )}
       >
