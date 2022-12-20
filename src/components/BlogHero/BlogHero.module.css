@@ -1,0 +1,23 @@
+.blog-hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding: 108px 0;
+  background: var(--orange-background);
+  box-shadow: inset 0 3px 12px 0 rgb(0 0 0 / 10%);
+}
+
+@media (min-width: 767px) {
+  .our-blog-hero {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .our-blog-hero {
+    margin-bottom: 120px;
+  }
+}

@@ -6,6 +6,17 @@
   margin-bottom: 20px;
 }
 
+.link {
+  padding: 12px 20px;
+  color: white;
+  display: inline-flex;
+  font-family: 'Work Sans';
+  text-align: center;
+  background: #ff5300;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+}
+
 .main-img {
   width: 100%;
 }

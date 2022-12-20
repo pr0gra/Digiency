@@ -8,6 +8,7 @@ import { Button } from '../../../../components/Button/Button'
 import { useState } from 'react'
 import { SearchPart } from '../SearchPart/SearchPart'
 import cx from 'classnames'
+import { Link } from 'react-router-dom'
 
 export function OurBlogMain() {
   const [currentPage, setCurrentPage] = useState(1)
@@ -66,7 +67,9 @@ export function OurBlogMain() {
               </ul>
               <h2 className={styles['title']}>{article.title}</h2>
               <p className={styles['text']}>{article.content}</p>
-              <Button buttonType="button-primary">Read More</Button>
+              <Link to={`/blog/${article.id}`} className={styles['link']}>
+                Read More
+              </Link>
             </div>
           )
         })}{' '}
