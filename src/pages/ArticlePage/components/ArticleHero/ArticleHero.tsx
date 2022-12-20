@@ -4,23 +4,27 @@ import { IOurBlog } from '../../../../../redux'
 import { BlogHero } from '../../../../components/BlogHero/BlogHero'
 import styles from './ArticleHero.module.css'
 
-interface Props {
-  data?: IOurBlog[]
-}
 
-export function ArticleHero({ data }: Props) {
+export function ArticleHero() {
   const { id } = useParams()
+  const { data, isLoading, isError } = useGetAllPostsQuery()
+  if (isLoading) {
+    return <h1>isLoading</h1>
+  }
+  if (isError) {
+    return <h1>isError</h1>
+  }
 
-  const currentArticle = data!.filter(post => {
-    return post.id === parseInt(id!)
-  })[0]
+  const currentArticle = data!.find(post => {
+    post.id === parseInt(id!)
+  })
 
   return (
     <BlogHero>
       {' '}
-      <h1 className={styles['title']}>{currentArticle.title}</h1>{' '}
+      <h1 className={styles['title']}>{currentArticle!.title}</h1>{' '}
       <h4 className={styles['subtitle']}>
-        Home - Blog Page - {currentArticle.type}
+        Home - Blog Page - {currentArticle!.type}
       </h4>
     </BlogHero>
   )
