@@ -13,16 +13,16 @@ export function ArticleHero() {
     return <h1>isError</h1>
   }
 
-  const currentArticle = data!.filter(post => {
-    return post.id === parseInt(id!)
-  })[0]
+  const currentArticle = data!.find(post => {
+    post.id === parseInt(id!)
+  })
 
   return (
     <BlogHero>
       {' '}
-      <h1 className={styles['title']}>{currentArticle.title}</h1>{' '}
+      <h1 className={styles['title']}>{currentArticle!.title}</h1>{' '}
       <h4 className={styles['subtitle']}>
-        Home - Blog Page - {currentArticle.type}
+        Home - Blog Page - {currentArticle!.type}
       </h4>
     </BlogHero>
   )
