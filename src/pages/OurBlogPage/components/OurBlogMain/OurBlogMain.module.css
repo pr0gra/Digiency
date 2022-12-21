@@ -29,6 +29,29 @@
   padding-left: 18px;
 }
 
+.button {
+  all: unset;
+  color: #ff5300;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Work Sans';
+  width: 40px;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #ff5300;
+}
+
+.active-button {
+  color: #fff;
+  background: #ff5300;
+}
+
+.button:hover {
+  color: #fff;
+  background: #ff5300;
+}
+
 .info-item {
   display: flex;
   gap: 10px;

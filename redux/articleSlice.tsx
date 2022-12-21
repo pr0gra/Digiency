@@ -30,10 +30,12 @@ type Response = IFetchArticles | IOurBlog[]
 
 export const fetchArticles = createAsyncThunk<
   Response,
-  undefined,
+  number,
   { rejectValue: string }
->('articles/fetchArticles', async function (_, { rejectWithValue }) {
-  const response = await fetch(`${HOST}/blog_posts?_limit=5&_page=1`)
+>('articles/fetchArticles', async function (currentPage, { rejectWithValue }) {
+  const response = await fetch(
+    `${HOST}/blog_posts?_limit=5&_page=${currentPage}`,
+  )
   const data = await response.json()
 
   if (!response.ok) {

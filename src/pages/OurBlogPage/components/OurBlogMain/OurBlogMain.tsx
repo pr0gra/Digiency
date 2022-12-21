@@ -9,8 +9,21 @@ import dateIcon from '../../../../assets/icons/our-blog-timer.svg'
 import authorIcon from '../../../../assets/icons/our-blog-person.svg'
 import commentsIcon from '../../../../assets/icons/our-blog-message.svg'
 import { Picture } from '../../../../components/Picture/Picture'
+import cx from 'classnames'
 
 export function OurBlogMain() {
+  function Pagination() {
+    const latestPaginationNum = Number(
+      new URL(pagination.last).searchParams.get('_page'),
+    )
+
+    const paginationArr = []
+    for (let i = 0; i < latestPaginationNum; i++) {
+      paginationArr.push(i)
+    }
+    return paginationArr
+  }
+
   const [currentPage, setCurrentPage] = useState(1)
   const [activeButton, setActiveButton] = useState(0)
   const [searchText, setSearchText] = useState('')
@@ -20,8 +33,8 @@ export function OurBlogMain() {
   )
 
   useEffect(() => {
-    dispatch(fetchArticles())
-  }, [dispatch])
+    dispatch(fetchArticles(currentPage))
+  }, [currentPage])
 
   return (
     <div className={styles['our-blog-main']}>
@@ -68,7 +81,30 @@ export function OurBlogMain() {
             </div>
           )
         })}
-        <div className={styles['pagination']}></div>
+        <div className={styles['pagination']}>
+          {list.length &&
+            Pagination().map((paginationNum, index) => {
+              const realPaginationNum = paginationNum + 1
+              return (
+                <button
+                  key={index}
+                  onClick={e => {
+                    scrollTo(0, 400)
+                    setCurrentPage(realPaginationNum)
+                    setActiveButton(index)
+                  }}
+                  className={cx(
+                    styles['button'],
+                    activeButton == index && styles['active-button'],
+                  )}
+                >
+                  {paginationNum < 10
+                    ? '0' + realPaginationNum
+                    : realPaginationNum}
+                </button>
+              )
+            })}
+        </div>
       </div>
       <SearchPart setSearchText={setSearchText} />
     </div>
