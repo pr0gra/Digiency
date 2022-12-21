@@ -26,15 +26,22 @@ interface IFetchArticles {
   pagination: any
 }
 
+interface ResponseArgs {
+  currentPage: number
+  searchText: string
+}
+
 type Response = IFetchArticles | IOurBlog[]
 
 export const fetchArticles = createAsyncThunk<
   Response,
-  number,
+  ResponseArgs,
   { rejectValue: string }
->('articles/fetchArticles', async function (currentPage, { rejectWithValue }) {
+>('articles/fetchArticles', async function (args, { rejectWithValue }) {
+  const { currentPage, searchText } = args
+
   const response = await fetch(
-    `${HOST}/blog_posts?_limit=5&_page=${currentPage}`,
+    `${HOST}/blog_posts?title_like=${searchText}&_limit=5&_page=${currentPage}`,
   )
   const data = await response.json()
 
@@ -48,7 +55,13 @@ export const fetchArticles = createAsyncThunk<
       pagination: { ...parseLinkHeader(response.headers.get('Link')) },
     }
   }
-  return response
+
+  console.log({ articles: [...data], pagination: {} }, 'хуй')
+
+  return {
+    articles: [...data],
+    pagination: {},
+  }
 })
 
 const initialState: articlesState = {

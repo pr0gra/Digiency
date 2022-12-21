@@ -27,19 +27,22 @@ export function OurBlogMain() {
   const [currentPage, setCurrentPage] = useState(1)
   const [activeButton, setActiveButton] = useState(0)
   const [searchText, setSearchText] = useState('')
+  const [state, setState] = useState('')
+
+  useEffect(() => {
+    dispatch(fetchArticles({ currentPage, searchText }))
+  }, [currentPage, searchText])
+
   const dispatch = useAppDispatch()
   const { list, pagination, loading, error } = useAppSelector(
     state => state.articles,
   )
-
-  useEffect(() => {
-    dispatch(fetchArticles(currentPage))
-  }, [currentPage])
+  console.log(pagination)
 
   return (
     <div className={styles['our-blog-main']}>
       <div className={styles['articles-part']}>
-        {list.map(article => {
+        {list?.map(article => {
           return (
             <div key={article.id} className={styles['article']}>
               <Picture
@@ -83,13 +86,13 @@ export function OurBlogMain() {
         })}
         <div className={styles['pagination']}>
           {list.length &&
+            pagination.last != undefined &&
             Pagination().map((paginationNum, index) => {
               const realPaginationNum = paginationNum + 1
               return (
                 <button
                   key={index}
                   onClick={e => {
-                    scrollTo(0, 400)
                     setCurrentPage(realPaginationNum)
                     setActiveButton(index)
                   }}
@@ -106,6 +109,7 @@ export function OurBlogMain() {
             })}
         </div>
       </div>
+
       <SearchPart setSearchText={setSearchText} />
     </div>
   )
