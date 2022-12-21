@@ -14,25 +14,24 @@ interface Props {
 export function ArticleMain({ data }: Props) {
   const { id } = useParams()
 
-  const currentArticle = data!.filter(post => {
-    return post.id === parseInt(id!)
-  })[0]
+  const currentArticle = data!.find(post => post.id == parseInt(id!))
+  console.log(currentArticle)
 
   return (
     <div className={styles['article-main']}>
       <div className={styles['content-part']}>
-        <Picture style={styles['main-img']} imgName={currentArticle.img} />
+        <Picture className={styles['main-img']} imgName={currentArticle?.img} />
         <ul className={styles['article-info']}>
           <li className={styles['article-info-item']}>
             <img className={styles['article-img']} src={timerIcon} alt="" />
             <p className={styles['article-info-text']}>
-              {currentArticle.created_at}
+              {currentArticle?.created_at}
             </p>
           </li>
           <li className={styles['article-info-item']}>
             <img className={styles['article-img']} src={personIcon} alt="" />
             <p className={styles['article-info-text']}>
-              {currentArticle.author}
+              {currentArticle?.author}
             </p>
           </li>
           <li className={styles['article-info-item']}>
@@ -42,7 +41,9 @@ export function ArticleMain({ data }: Props) {
         </ul>
         <div
           className={styles['content']}
-          dangerouslySetInnerHTML={{ __html: `${currentArticle.full_content}` }}
+          dangerouslySetInnerHTML={{
+            __html: `${currentArticle?.full_content}`,
+          }}
         />
       </div>
       <SearchPart />

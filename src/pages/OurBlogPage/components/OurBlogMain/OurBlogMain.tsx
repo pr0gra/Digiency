@@ -5,6 +5,10 @@ import { SearchPart } from '../SearchPart/SearchPart'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks'
 import { fetchArticles } from '../../../../../redux/articleSlice'
+import dateIcon from '../../../../assets/icons/our-blog-timer.svg'
+import authorIcon from '../../../../assets/icons/our-blog-person.svg'
+import commentsIcon from '../../../../assets/icons/our-blog-message.svg'
+import { Picture } from '../../../../components/Picture/Picture'
 
 export function OurBlogMain() {
   const [currentPage, setCurrentPage] = useState(1)
@@ -23,16 +27,44 @@ export function OurBlogMain() {
     <div className={styles['our-blog-main']}>
       <div className={styles['articles-part']}>
         {list.map(article => {
-          console.log(article.img)
           return (
             <div key={article.id} className={styles['article']}>
-              <img
-                src={`https://picsum.photos/id/${article.id}/200/300`}
-                alt=""
+              <Picture
+                className={styles['article-img']}
+                imgName={article.img}
+                alt="img"
               />
-              <Link to={`/blog/${article.id}`}>
-                <Button buttonType="button-primary">Read More</Button>
-              </Link>
+              <div className={styles['bottom-part']}>
+                <div className={styles['article-info']}>
+                  <div className={styles['info-item']}>
+                    <img className={styles['info-img']} src={dateIcon} alt="" />
+                    <p className={styles['info-text']}>
+                      {article.created_at}
+                    </p>{' '}
+                  </div>
+                  <div className={styles['info-item']}>
+                    <img
+                      className={styles['info-img']}
+                      src={authorIcon}
+                      alt=""
+                    />{' '}
+                    <p className={styles['info-text']}>{article.author}</p>{' '}
+                  </div>
+                  <div className={styles['info-item']}>
+                    <img
+                      className={styles['info-img']}
+                      src={commentsIcon}
+                      alt=""
+                    />{' '}
+                    <p className={styles['info-text']}>10 Comments</p>{' '}
+                  </div>
+                </div>
+                <h2 className={styles['title']}>{article.title}</h2>
+                <p className={styles['text']}>{article.content}</p>
+                <Link to={`/blog/${article.id}`}>
+                  <Button buttonType="button-primary">Read More</Button>
+                </Link>
+              </div>
             </div>
           )
         })}
