@@ -1,7 +1,6 @@
 .about-us {
-  padding: 60px 20px;
-  background: var(--orange-background);
-  margin-bottom: 60px;
+  padding: 60px 40px 50px;
+  background: var(--background-colorful-component);
 }
 
 .img {
@@ -31,7 +30,6 @@
 
 @media (min-width: 767px) {
   .about-us {
-    margin-bottom: 120px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -40,8 +38,8 @@
 
   .img {
     max-width: 400px;
-    margin: 0;
     max-height: 350px;
+    margin: 0;
   }
 
   .text-part {

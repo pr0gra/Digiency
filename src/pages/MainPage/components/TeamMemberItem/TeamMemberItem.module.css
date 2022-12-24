@@ -6,6 +6,7 @@
 }
 
 .scrolling-container {
+  background: var(--background-colorful-component-containers);
   flex: 0 0 auto;
   width: 270px;
   height: 350px;
@@ -19,11 +20,11 @@
 
 .team-member-text-part-title {
   margin-bottom: 12px;
-  color: black;
+  color: var(--paragraph);
 }
 
 .team-member-text-part-subtitle {
-  color: black;
+  color: var(--paragraph-permanent);
 }
 
 .media-links {

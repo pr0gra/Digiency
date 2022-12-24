@@ -10,9 +10,7 @@ export function OurBlogPage() {
     <>
       <Header />
       <OurBlogHero />
-      <Layout>
-        <OurBlogMain />
-      </Layout>
+      <OurBlogMain />
       <Footer />
       <FooterBottom />
     </>

@@ -1,13 +1,13 @@
-:root {
-  --orange: #ff5300;
-  --orange-background: #fff7f4;
-  --black: #373737;
-  --dark-background: #18191a;
-  --dark-view1: #242526;
-  --dark-view2: #3a3b3c;
-  --gray-paragraph: #7b7b7b;
-  --white: #fff;
-}
+/* :root {
+ галочка --orange: #ff5300;
+ зиночка --orange-background: #fff7f4;
+ светочка --black: #373737;
+ нигде нет --dark-background: #18191a;
+ нигде нет  --dark-view1: #242526;
+ нигде нет  --dark-view2: #3a3b3c;
+ лерочка --gray-paragraph: #7b7b7b;
+ нигде нет --white: #fff;
+} */
 
 html {
   scroll-behavior: smooth;
@@ -15,6 +15,7 @@ html {
 
 * {
   flex-shrink: initial;
+  transition: 0.2s;
 }
 
 @font-face {
@@ -35,26 +36,26 @@ div {
 }
 
 h1 {
-  color: var(--black);
+  color: var(--black-to-white);
   font-size: 31.25px;
   font-family: 'Work Sans';
   line-height: 38.62px;
 }
 
 h2 {
-  color: var(--black);
+  color: var(--black-to-white);
   font-size: 25px;
   font-family: 'Work Sans';
 }
 
 h3 {
-  color: var(--black);
+  color: var(--black-to-white);
   font-size: 20px;
   font-family: 'Work Sans';
 }
 
 h4 {
-  color: var(--black);
+  color: var(--black-to-white);
   font-weight: 400;
   font-size: 16px;
   font-family: 'Work Sans';
@@ -62,19 +63,19 @@ h4 {
 }
 
 p {
-  color: var(--gray-paragraph);
+  color: var(--paragraph);
   font-size: 16px;
   font-family: 'Work Sans';
   line-height: 24.1px;
 }
 
 span {
-  color: var(--orange);
+  color: var(--orange-permanent);
   font-family: 'Work Sans';
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--orange);
+  background: var(--orange-permanent);
 }
 
 @media (min-width: 767px) {

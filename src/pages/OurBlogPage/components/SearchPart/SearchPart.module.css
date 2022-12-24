@@ -3,6 +3,7 @@
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 18px;
+  background: var(--background-colorful-component-containers);
   box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
 }
 
@@ -20,6 +21,7 @@
 }
 
 .latest-post-container {
+  background: var(--background-colorful-component-containers);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -37,6 +39,7 @@
 
 .categories-container,
 .tags-container {
+  background: var(--background-colorful-component-containers);
   margin-bottom: 40px;
   padding: 40px 18px;
   box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
@@ -54,7 +57,8 @@
 
 .tag-item {
   padding: 4px 12px;
-  background: #fff7f4;
+  background: var(--our-blog-tags-only);
+  color: var(--paragraph-permanent);
 }
 
 .categories-list {

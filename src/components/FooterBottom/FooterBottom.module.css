@@ -6,7 +6,7 @@
 
 .footer-bottom {
   gap: 6px;
-  background: var(--orange);
+  background: var(--orange-permanent);
 
   display: flex;
   align-items: center;

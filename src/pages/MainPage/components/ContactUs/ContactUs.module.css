@@ -1,3 +1,8 @@
+.contact-us {
+  padding: 50px 40px;
+  background: var(--background-color-white);
+}
+
 .contact-us-text-part {
   margin-bottom: 18px;
   text-align: center;
@@ -7,10 +12,6 @@
   display: flex;
   gap: 30px;
   justify-content: center;
-}
-
-.contact-us {
-  margin-bottom: 50px;
 }
 
 .contact-us-text-part-subtitle {
@@ -25,6 +26,7 @@
 }
 
 .contact-us-contact-way-container {
+  background: var(--background-second-color);
   height: 224px;
   padding: 18px 0 0 18px;
   box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
@@ -37,7 +39,6 @@
 
 .contact-us-contact-way-top-part {
   display: flex;
-  align-items: center;
   margin-bottom: 34px;
 }
 
@@ -72,12 +73,11 @@
   }
 
   .grades-array {
-    gap: 50px;
+    gap: 120px;
   }
 
   .contact-us-contact-way-img {
-    width: 60px;
-    height: 60px;
+    max-width: 100px;
   }
 
   .contact-us-contact-way-span {
@@ -87,10 +87,6 @@
   .contact-us-contact-way-container {
     min-width: 220px;
     padding-right: 10px;
-  }
-
-  .grades-array {
-    gap: 120px;
   }
 }
 

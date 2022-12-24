@@ -1,5 +1,6 @@
 .our-case-study {
-  margin-bottom: 60px;
+  padding: 70px 40px;
+  background: var(--background-color-white);
 }
 
 .text-part {
@@ -14,7 +15,7 @@
 
 .subtitle {
   margin-bottom: 15px;
-  color: var(--orange);
+  color: var(--pre-title-of-blog);
 }
 
 .title {
@@ -31,7 +32,7 @@
 
 @media (min-width: 767px) {
   .our-case-study {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 
   .images-part {

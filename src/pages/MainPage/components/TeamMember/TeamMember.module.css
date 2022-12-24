@@ -1,3 +1,8 @@
+.team-member {
+  padding: 50px 40px;
+  background: var(--background-color-white);
+}
+
 .team-member-text-part {
   margin-bottom: 18px;
   text-align: center;
@@ -5,10 +10,7 @@
 
 .team-member-text-part-subtitle {
   margin-bottom: 18px;
-}
-
-.team-member {
-  margin-bottom: 50px;
+  color: var(--paragraph);
 }
 
 @media (min-width: 767px) {

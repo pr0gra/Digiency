@@ -48,7 +48,7 @@ export function ClientsFeedback() {
           })[0]
           .map(client => {
             return (
-              <div className={styles['client']}>
+              <div key={client.id} className={styles['client']}>
                 <img
                   className={styles['feedback-img']}
                   src={`/src/assets/images/${client.avatar}`}
@@ -75,7 +75,7 @@ export function ClientsFeedback() {
       <div className={styles['clients-feedback-scroll-part-mobile']}>
         {data!.map(client => {
           return (
-            <div className={styles['client']}>
+            <div key={client.id} className={styles['client']}>
               <img
                 className={styles['feedback-img']}
                 src={`/src/assets/images/${client.avatar}`}
@@ -111,6 +111,7 @@ export function ClientsFeedback() {
                 setVisibleComments(i)
                 setActiveButton(i)
               }}
+              key={i}
               className={cx(styles['pagination-dot'])}
             ></button>
           )

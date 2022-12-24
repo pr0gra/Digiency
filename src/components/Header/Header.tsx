@@ -1,12 +1,14 @@
 import styles from './Header.module.css'
 import digiencyMainLogo from '../../assets/icons/digiency-main-logo.svg'
-import themeIcon from '../../assets/icons/theme-icon.svg'
+
 import burgerMenu from '../../assets/icons/burger-menu.svg'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { HTMLAttributes } from 'react'
 import cx from 'classnames'
 import { CSSTransition } from 'react-transition-group'
+import { ButtonTheme } from '../ButtonTheme/ButtonTheme'
+import { useInView } from 'react-intersection-observer'
 
 interface HeaderProps {
   HomeVisibleButton?: boolean
@@ -16,15 +18,17 @@ type Props = HeaderProps & HTMLAttributes<HTMLDivElement>
 
 export function Header({ HomeVisibleButton, ...rest }: Props) {
   const [menuVisible, setMenuVisible] = useState(false)
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
 
   return (
-    <header {...rest} className={styles['header']}>
+    <header ref={ref} {...rest} className={styles['header']}>
       <Link to="/">
-        <img
-          className={styles['digiency-main-logo']}
-          src={digiencyMainLogo}
-          alt=""
-        />
+        <h2>
+          <span>Digi</span>ency
+        </h2>
       </Link>
       <button
         onClick={e => {
@@ -32,7 +36,14 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
         }}
         className={styles['burger-menu-button']}
       >
-        <img className={styles['burger-menu-img']} src={burgerMenu} alt="" />
+        <img
+          className={cx(
+            styles['burger-menu-img'],
+            inView ? styles['in-view-burger'] : styles['out-view-burger'],
+          )}
+          src={burgerMenu}
+          alt=""
+        />
       </button>
 
       <ul
@@ -82,13 +93,19 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
       </ul>
 
       <nav className={styles['navigation']}>
-        <ul className={styles['list']}>
+        <ul
+          className={cx(
+            styles['list'],
+            inView ? styles['in-view-menu'] : styles['out-view-menu'],
+          )}
+        >
           <li className={styles['item']}>
             <Link to="/home" className={styles['item-link']}>
               <h4
                 style={{
                   color:
-                    window.location.pathname === '/home' && 'var(--orange)',
+                    window.location.pathname === '/home' &&
+                    'var(--orange-permanent)',
                 }}
                 className={styles['item-text']}
               >
@@ -131,12 +148,7 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
         <h4 className={styles['button-text']}> Let’s Talk</h4>
       </button>
 
-      <img
-        style={{ display: HomeVisibleButton ? 'none' : 'flex' }}
-        className={styles['theme-icon']}
-        src={themeIcon}
-        alt=""
-      />
+      {!HomeVisibleButton && <ButtonTheme className={styles['theme-icon']} />}
     </header>
   )
 }

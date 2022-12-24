@@ -1,5 +1,6 @@
 .our-work {
-  margin-bottom: 50px;
+  background: var(--background-color-white);
+  padding-bottom: 50px;
 }
 
 .our-work-text-part {
@@ -26,7 +27,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 370px);
     justify-content: center;
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 
   .picture {
@@ -36,7 +37,7 @@
 
 @media (min-width: 1440px) {
   .our-work {
-    height: 1125px;
+    height: 1200px;
   }
 
   .our-work-images-part {

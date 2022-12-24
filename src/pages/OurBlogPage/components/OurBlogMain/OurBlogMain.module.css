@@ -6,6 +6,11 @@
   margin-bottom: 40px;
 }
 
+.our-blog-container {
+  padding-top: 120px;
+  background: var(--background-color-white);
+}
+
 .our-blog-main {
   display: flex;
   flex-direction: column;

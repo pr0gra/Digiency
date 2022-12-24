@@ -4,15 +4,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   padding: 108px 0;
-  background: var(--orange-background);
+  background: var(--background-colorful-component);
   box-shadow: inset 0 3px 12px 0 rgb(0 0 0 / 10%);
 }
 
 @media (min-width: 767px) {
   .blog-hero {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     padding: 108px 110px;
   }
 }
@@ -20,6 +20,6 @@
 @media (min-width: 1440px) {
   .blog-hero {
     padding: 108px 304px;
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 }

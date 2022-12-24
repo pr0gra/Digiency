@@ -8,7 +8,9 @@ export function Footer() {
     <footer className={styles['footer']}>
       <div className={styles['footer-container']}>
         <div className={styles['media-part']}>
-          <img className={styles['img-logo']} src={mainLogo} alt="" />
+          <h2 className={styles['footer-logo']}>
+            <span>Digi</span>ency
+          </h2>
           <p className={styles['text']}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis,
             cursus egestas etiam posuere vitae cursus consectetur eu. Cursus
