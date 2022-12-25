@@ -1,5 +1,5 @@
 .article-main {
-  padding: 0 16px;
+  padding: 60px 16px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -36,7 +36,7 @@
 
 @media (min-width: 1000px) {
   .article-main {
-    padding: 0 40px;
+    padding: 120px 40px;
     display: flex;
     flex-direction: row;
     align-items: initial;

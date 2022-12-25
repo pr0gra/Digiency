@@ -93,5 +93,4 @@ const articleSlice = createSlice({
   },
 })
 
-// export const { addArticle } = articleSlice.actions
 export default articleSlice.reducer

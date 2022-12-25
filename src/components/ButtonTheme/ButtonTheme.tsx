@@ -1,23 +1,44 @@
+import { memo, useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { switchTheme } from '../../../redux/themeSlice'
 import themeIcon from '../../assets/icons/theme-icon.svg'
 
-interface Props {
-  className: string
+interface Component {
+  styles?: string
 }
+interface FC {
+  name: string
+  content: string
+}
+type Test = FC
+export const ButtonTheme = memo(({ styles }: Component) => {
+  const [invert, setInvert] = useState(0)
+  const dispatch = useDispatch()
+  const isDarkTheme = useSelector(state => state.theme.darkTheme)
 
-export function ButtonTheme({ className }: Props) {
   return (
     <img
       src={themeIcon}
       alt="light"
-      className={className}
+      className={styles}
+      id="switchTheme"
+      style={{ filter: `invert(${+isDarkTheme})` }}
       onClick={() => {
-        let theme = document.getElementById('theme')
-        if (theme!.getAttribute('href') == './src/dark-theme.css') {
-          theme!.href = './src/light-theme.css'
+        const meta: Test | any = document.querySelector(
+          'meta[name="color-scheme"]',
+        )
+        if (meta!.content === 'dark') {
+          meta!.content = 'light'
+          document.body.classList.remove('dark-mode')
+          document.body.classList.add('light-mode')
+          dispatch(switchTheme())
         } else {
-          theme!.href = './src/dark-theme.css'
+          meta!.content = 'dark'
+          document.body.classList.remove('light-mode')
+          document.body.classList.add('dark-mode')
+          dispatch(switchTheme())
         }
       }}
     />
   )
-}
+})

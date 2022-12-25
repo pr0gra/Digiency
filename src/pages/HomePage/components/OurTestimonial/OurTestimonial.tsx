@@ -16,8 +16,7 @@ export function OurTestimonial() {
   if (isError) {
     return <h2>Error</h2>
   }
-  console.log(currentComments)
-  console.log(currentComments - 3 > 0)
+
   return (
     <div className={styles['our-testimonial']}>
       <div className={styles['text-part']}>
