@@ -11,10 +11,18 @@
   display: flex;
 }
 
+.dark-link {
+  background: var(--background-second-color);
+}
+
 .img {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
+}
+
+.dark-mode path {
+  fill: white;
 }

@@ -133,15 +133,19 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
               onClick={e => {
                 console.log(window.location.pathname)
               }}
-              style={{
-                color:
-                  window.location.pathname === '/blog' &&
-                  'var(--orange-permanent)',
-              }}
               to="/blog"
               className={styles['item-link']}
             >
-              <h4 className={styles['item-text']}>Our Blog</h4>
+              <h4
+                style={{
+                  color:
+                    window.location.pathname === '/blog' &&
+                    'var(--orange-permanent)',
+                }}
+                className={styles['item-text']}
+              >
+                Our Blog
+              </h4>
             </Link>
           </li>
           <li className={styles['item']}>
