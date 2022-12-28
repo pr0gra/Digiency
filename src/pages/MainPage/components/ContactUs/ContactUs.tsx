@@ -11,7 +11,7 @@ import gradeImg4 from '../../../../assets/images/contact-us-grade-4.svg'
 
 export function ContactUs() {
   return (
-    <div className={styles['contact-us']}>
+    <div id="contact-us" className={styles['contact-us']}>
       <div className={styles['contact-us-text-part']}>
         <p className={styles['contact-us-text-part-subtitle']}>Contact Us</p>
         <h2 className={styles['contact-us-text-part-title']}>

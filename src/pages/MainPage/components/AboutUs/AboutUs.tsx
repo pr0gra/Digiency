@@ -24,7 +24,12 @@ export function AboutUs() {
             Ornare etiam erat volutpat tempor fringilla mi. Elit a blandit
             faucibus est, dui interdum ut amet.
           </p>
-          <Button buttonType="button-primary">Contact us</Button>
+          <Button
+            onClick={e => (window.location.href = '#contact-us')}
+            buttonType="button-primary"
+          >
+            Contact us
+          </Button>
         </div>
       </div>
       <div className={styles['about-us-content-array']}>

@@ -5,10 +5,14 @@
 
 .link {
   padding: 10px;
-  background: white;
+  background: var(--background-second-color);
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.link path {
+  fill: var(--button-icon-media);
 }
 
 .dark-link {

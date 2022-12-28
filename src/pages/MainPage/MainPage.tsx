@@ -9,6 +9,7 @@ import { OurWork } from './components/OurWork/OurWork'
 import { ClientsFeedback } from './components/ClientsFeedback/ClientsFeedback'
 import { Footer } from '../../components/Footer/Footer'
 import { FooterBottom } from '../../components/FooterBottom/FooterBottom'
+import { OurBlog } from './components/OurBlog/OurBlog'
 
 export function MainPage() {
   return (
@@ -20,6 +21,7 @@ export function MainPage() {
       <TeamMember />
       <OurWork />
       <ClientsFeedback />
+      {/* // <OurBlog /> */}
       <ContactUs />
       <Footer />
       <FooterBottom />

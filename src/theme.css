@@ -13,6 +13,7 @@
     --background-colorful-component-containers: #fff;
     --footer-gray: #373737;
     --our-blog-tags-only: #fff7f4;
+    --button-icon-media: #ff5300;
   }
 }
 
@@ -31,6 +32,7 @@
     --background-colorful-component-containers: #242526;
     --footer-gray: #373737;
     --our-blog-tags-only: #373737;
+    --button-icon-media: #fff;
   }
 }
 
@@ -48,6 +50,7 @@
   --background-colorful-component-containers: #fff;
   --footer-gray: #373737;
   --our-blog-tags-only: #fff7f4;
+  --button-icon-media: #ff5300;
 }
 
 .dark-mode {
@@ -64,4 +67,5 @@
   --background-colorful-component-containers: #242526;
   --footer-gray: #373737;
   --our-blog-tags-only: #373737;
+  --button-icon-media: #fff;
 }

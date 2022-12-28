@@ -56,8 +56,6 @@ export const fetchArticles = createAsyncThunk<
     }
   }
 
-  console.log({ articles: [...data], pagination: {} }, 'хуй')
-
   return {
     articles: [...data],
     pagination: {},

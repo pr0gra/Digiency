@@ -22,7 +22,12 @@ export function OurExperience() {
           faucibus est, dui interdum ut amet.
         </p>
 
-        <Button buttonType="button-primary">Contact Us</Button>
+        <Button
+          onClick={e => (window.location.href = '#contact-us')}
+          buttonType="button-primary"
+        >
+          Contact Us
+        </Button>
       </div>
       <div className={styles['our-experience-array-part']}>
         <div className={styles['our-experience-array-item']}>

@@ -41,7 +41,12 @@ export function MainHero() {
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. .
         </p>
-        <Button buttonType="button-primary">Contact Us</Button>
+        <Button
+          onClick={e => (window.location.href = '#contact-us')}
+          buttonType="button-primary"
+        >
+          Contact Us
+        </Button>
       </div>
     </div>
   )
