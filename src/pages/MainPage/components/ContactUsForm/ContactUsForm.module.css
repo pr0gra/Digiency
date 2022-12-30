@@ -28,11 +28,13 @@
 .input[type='text'] {
   padding-left: 18px;
   font: 'Work Sans';
+  background: var(--background-colorful-component-containers);
 }
 
 .input[type='text-area'] {
   padding-top: 18px;
   padding-left: 18px;
+  background: var(--background-colorful-component-containers);
 }
 
 .input::placeholder {
@@ -44,6 +46,8 @@
 }
 
 .input-select {
+  background: var(--background-colorful-component-containers);
+
   display: flex;
   align-items: center;
   padding-left: 18px;

@@ -26,14 +26,23 @@ interface IFetchArticles {
   pagination: any
 }
 
+interface ResponseArgs {
+  currentPage: number
+  searchText: string
+}
+
 type Response = IFetchArticles | IOurBlog[]
 
 export const fetchArticles = createAsyncThunk<
   Response,
-  undefined,
+  ResponseArgs,
   { rejectValue: string }
->('articles/fetchArticles', async function (_, { rejectWithValue }) {
-  const response = await fetch(`${HOST}/blog_posts?_limit=5&_page=1`)
+>('articles/fetchArticles', async function (args, { rejectWithValue }) {
+  const { currentPage, searchText } = args
+
+  const response = await fetch(
+    `${HOST}/blog_posts?title_like=${searchText}&_limit=5&_page=${currentPage}`,
+  )
   const data = await response.json()
 
   if (!response.ok) {
@@ -46,7 +55,13 @@ export const fetchArticles = createAsyncThunk<
       pagination: { ...parseLinkHeader(response.headers.get('Link')) },
     }
   }
-  return response
+
+  console.log({ articles: [...data], pagination: {} }, 'хуй')
+
+  return {
+    articles: [...data],
+    pagination: {},
+  }
 })
 
 const initialState: articlesState = {
@@ -78,5 +93,4 @@ const articleSlice = createSlice({
   },
 })
 
-// export const { addArticle } = articleSlice.actions
 export default articleSlice.reducer

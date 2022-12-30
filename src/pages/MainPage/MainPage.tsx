@@ -15,18 +15,12 @@ export function MainPage() {
     <>
       <Header />
       <MainHero />
-      <Layout>
-        <AboutUs />
-      </Layout>
+      <AboutUs />
       <OurExperience />
-      <Layout>
-        <TeamMember />
-        <OurWork />
-      </Layout>
+      <TeamMember />
+      <OurWork />
       <ClientsFeedback />
-      <Layout>
-        <ContactUs />
-      </Layout>
+      <ContactUs />
       <Footer />
       <FooterBottom />
     </>

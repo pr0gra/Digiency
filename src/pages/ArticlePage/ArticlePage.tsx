@@ -1,5 +1,6 @@
 import { useGetAllPostsQuery } from '../../../redux'
 import { Footer } from '../../components/Footer/Footer'
+import { FooterBottom } from '../../components/FooterBottom/FooterBottom'
 import { Header } from '../../components/Header/Header'
 import { ArticleHero } from './components/ArticleHero/ArticleHero'
 import { ArticleMain } from './components/ArticleMain/ArticleMain'
@@ -19,6 +20,7 @@ export function ArticlePage() {
       <ArticleHero data={data} />
       <ArticleMain data={data} />
       <Footer />
+      <FooterBottom />
     </>
   )
 }

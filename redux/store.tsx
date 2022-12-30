@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { digiencyApi } from './digiencyApi'
 import articlesSlice from './articleSlice'
+import themeSlice from './themeSlice'
 
 export const store = configureStore({
   reducer: {
     articles: articlesSlice,
+    theme: themeSlice,
     [digiencyApi.reducerPath]: digiencyApi.reducer,
   },
   middleware: getDefaultMiddleware =>

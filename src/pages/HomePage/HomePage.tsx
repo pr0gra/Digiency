@@ -14,21 +14,21 @@ export function HomePage() {
     <>
       <Header
         HomeVisibleButton={true}
-        style={{ background: 'var(--orange-background)' }}
+        style={{ background: 'var(--background-colorful-component)' }}
       />
       <Hero />
-      <Layout>
-        <OurServices />
-      </Layout>
+
+      <OurServices />
+
       <AboutUs />
-      <Layout>
-        <OurCaseStudy />
-      </Layout>
+
+      <OurCaseStudy />
+
       <OurTestimonial />
-      <Layout>
-        <OurCapabilities />
-        <Subscribe />
-      </Layout>
+
+      <OurCapabilities />
+      <Subscribe />
+
       <HomeFooter />
     </>
   )

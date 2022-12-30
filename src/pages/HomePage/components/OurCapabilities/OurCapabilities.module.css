@@ -4,7 +4,8 @@
 }
 
 .our-capabilities {
-  margin-bottom: 120px;
+  padding: 120px 40px;
+  background: var(--background-color-white);
 }
 
 .bottom-part {
@@ -61,6 +62,7 @@
 
 .statistic-percent {
   margin-bottom: 5px;
+  color: var(--orange-permanent);
 }
 
 .element-count {
@@ -76,7 +78,7 @@
   min-width: 80px;
   padding: 10px 20px;
   text-align: center;
-  background: #fff;
+  background: var(-background-pinterest-component-containers);
   box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
 }
 
@@ -86,7 +88,7 @@
 }
 
 .bottom-part {
-  background: var(--orange);
+  background: var(--orange-permanent);
 }
 
 @media (min-width: 767px) {

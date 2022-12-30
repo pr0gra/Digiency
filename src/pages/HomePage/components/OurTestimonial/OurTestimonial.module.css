@@ -1,8 +1,8 @@
 .our-testimonial {
   position: relative;
-  margin-bottom: 120px;
+
   padding: 120px 60px;
-  background: var(--orange-background);
+  background: var(--background-colorful-component);
 }
 
 .slider-part {
@@ -15,7 +15,7 @@
 
 .subtitle {
   margin-bottom: 15px;
-  color: var(--orange);
+  color: var(--pre-title-of-blog);
 }
 
 .title {
@@ -50,7 +50,7 @@
 .comment-item {
   max-width: 370px;
   padding: 25px;
-  background: #fff;
+  background: var(--background-color-white);
   border-radius: 10px;
   box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
 }

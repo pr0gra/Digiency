@@ -30,7 +30,10 @@ export function AboutUs() {
       <div className={styles['about-us-content-array']}>
         <div className={styles['about-us-item']}>
           <img
-            style={{ background: '#FF5300' }}
+            style={{
+              background: '#FF5300',
+              boxShadow: '4px 5px 15px rgba(255, 83, 0, 0.4)',
+            }}
             className={styles['about-us-item-img']}
             src={folderIcon}
             alt=""
@@ -41,7 +44,10 @@ export function AboutUs() {
         </div>
         <div className={styles['about-us-item']}>
           <img
-            style={{ background: '#7B7B7B' }}
+            style={{
+              background: '#7B7B7B',
+              boxShadow: '4px 5px 15px rgba(0, 0, 0, 0.4)',
+            }}
             className={styles['about-us-item-img']}
             src={quotesIcon}
             alt=""
@@ -52,7 +58,10 @@ export function AboutUs() {
         </div>
         <div className={styles['about-us-item']}>
           <img
-            style={{ background: '#00ACFF' }}
+            style={{
+              background: '#00ACFF',
+              boxShadow: '4px 5px 15px rgba(0, 194, 255, 0.4)',
+            }}
             className={styles['about-us-item-img']}
             src={settingsIcon}
             alt=""
@@ -63,7 +72,10 @@ export function AboutUs() {
         </div>
         <div className={styles['about-us-item']}>
           <img
-            style={{ background: '#373737' }}
+            style={{
+              background: '#373737',
+              boxShadow: '4px 5px 15px rgba(0, 0, 0, 0.4)',
+            }}
             className={styles['about-us-item-img']}
             src={vectorIcon}
             alt=""

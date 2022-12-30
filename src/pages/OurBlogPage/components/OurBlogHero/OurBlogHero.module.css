@@ -3,20 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 108px 0;
-  background: var(--orange-background);
+  padding: 108px 40px 50px;
+  background: var(--background-colorful-component);
   box-shadow: inset 0 3px 12px 0 rgb(0 0 0 / 10%);
-  margin-bottom: 50px;
 }
 
 @media (min-width: 767px) {
   .our-blog-hero {
-    margin-bottom: 60px;
+    padding: 108px 40px 60px;
   }
 }
 
 @media (min-width: 1440px) {
   .our-blog-hero {
-    margin-bottom: 120px;
+    padding: 108px 40px 120px;
   }
 }

@@ -1,12 +1,12 @@
 .article-main {
-  padding: 0 16px;
+  padding: 60px 16px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
+  margin: 0 auto;
 }
 
-.main-img {
+.main-img img {
   width: 100%;
 }
 
@@ -34,17 +34,21 @@
   margin-bottom: 60px;
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1000px) {
   .article-main {
-    padding: 0 40px;
+    padding: 120px 40px;
     display: flex;
     flex-direction: row;
     align-items: initial;
   }
+
+  .main-img img {
+    width: 100%;
+  }
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1440px) {
   .article-main {
-    padding: 0 135px;
+    max-width: 1200px;
   }
 }

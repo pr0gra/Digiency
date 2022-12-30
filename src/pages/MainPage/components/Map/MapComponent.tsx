@@ -17,14 +17,16 @@ export default function MapComponent() {
   }
 
   return (
-    <YMaps>
-      <Map defaultState={defaultState} className={styles['map']}>
-        <Placemark geometry={[38.7167, 9.13333]} />
-        <ZoomControl />
-        <FullscreenControl />
-        <SearchControl />
-        <GeolocationControl />
-      </Map>
-    </YMaps>
+    <div className={styles['map']}>
+      <YMaps>
+        <Map defaultState={defaultState} className={styles['map']}>
+          <Placemark geometry={[38.7167, 9.13333]} />
+          <ZoomControl />
+          <FullscreenControl />
+          <SearchControl />
+          <GeolocationControl />
+        </Map>
+      </YMaps>
+    </div>
   )
 }

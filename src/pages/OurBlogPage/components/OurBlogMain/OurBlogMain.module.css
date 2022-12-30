@@ -3,24 +3,63 @@
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.our-blog-container {
+  padding-top: 120px;
+  background: var(--background-color-white);
 }
 
 .our-blog-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .link {
+  display: inline-flex;
   padding: 12px 20px;
   color: white;
-  display: inline-flex;
   font-family: 'Work Sans';
   text-align: center;
   background: #ff5300;
   border-radius: 5px;
   box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+}
+
+.bottom-part {
+  padding-left: 18px;
+}
+
+.button {
+  all: unset;
+  color: #ff5300;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Work Sans';
+  width: 40px;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #ff5300;
+}
+
+.active-button {
+  color: #fff;
+  background: #ff5300;
+}
+
+.button:hover {
+  color: #fff;
+  background: #ff5300;
+}
+
+.info-item {
+  display: flex;
+  gap: 10px;
 }
 
 .main-img {
@@ -30,6 +69,15 @@
 .article-info-item {
   display: flex;
   gap: 10px;
+}
+
+.info-text {
+  white-space: nowrap;
+}
+
+.info-img {
+  width: 18px;
+  height: 18px;
 }
 
 .title {
@@ -49,14 +97,14 @@
 }
 
 .pagination-number-button {
-  all: unset;
-  padding: 8px;
-  border: 1px solid #ff5300;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ff5300;
+  all: unset;
 }
 
 .active-button {
@@ -68,17 +116,33 @@
 }
 
 .pagination {
-  justify-content: center;
   display: flex;
   gap: 20px;
+  justify-content: center;
   margin-bottom: 50px;
+}
+
+.article-img img {
+  width: 100%;
 }
 
 @media (min-width: 767px) {
   .our-blog-main {
     display: flex;
     flex-direction: row;
-    align-items: initial;
     gap: 24px;
+    align-items: initial;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .our-blog-main {
+    max-width: 1200px;
+  }
+
+  .article-img img {
+    width: 100%;
+    height: 400px;
   }
 }

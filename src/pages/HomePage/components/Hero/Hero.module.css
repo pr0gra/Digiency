@@ -1,7 +1,6 @@
 .hero {
-  margin-bottom: 120px;
-  padding: 50px 20px;
-  background: var(--orange-background);
+  padding: 50px 40px 120px 40px;
+  background: var(--background-colorful-component);
 }
 
 .text-part {

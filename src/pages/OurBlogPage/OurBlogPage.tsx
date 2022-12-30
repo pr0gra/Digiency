@@ -1,4 +1,5 @@
 import { Footer } from '../../components/Footer/Footer'
+import { FooterBottom } from '../../components/FooterBottom/FooterBottom'
 import { Header } from '../../components/Header/Header'
 import { Layout } from '../../components/Layout/Layout'
 import { OurBlogHero } from './components/OurBlogHero/OurBlogHero'
@@ -9,10 +10,9 @@ export function OurBlogPage() {
     <>
       <Header />
       <OurBlogHero />
-      <Layout>
-        <OurBlogMain />
-      </Layout>
+      <OurBlogMain />
       <Footer />
+      <FooterBottom />
     </>
   )
 }
