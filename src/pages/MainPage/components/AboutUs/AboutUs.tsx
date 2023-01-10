@@ -43,9 +43,9 @@ export function AboutUs() {
             src={folderIcon}
             alt=""
           />
-          <h3 className="about-us-item-title">
+          <p className={styles['about-us-item-title']}>
             World leader in consulting and finance
-          </h3>
+          </p>
         </div>
         <div className={styles['about-us-item']}>
           <img
@@ -57,9 +57,9 @@ export function AboutUs() {
             src={quotesIcon}
             alt=""
           />
-          <h3 className="about-us-item-title">
+          <p className={styles['about-us-item-title']}>
             A focused team with a specialized skill
-          </h3>
+          </p>
         </div>
         <div className={styles['about-us-item']}>
           <img
@@ -71,9 +71,9 @@ export function AboutUs() {
             src={settingsIcon}
             alt=""
           />
-          <h3 className="about-us-item-title">
+          <p className={styles['about-us-item-title']}>
             Trusted and professional advisors for you
-          </h3>
+          </p>
         </div>
         <div className={styles['about-us-item']}>
           <img
@@ -85,9 +85,9 @@ export function AboutUs() {
             src={vectorIcon}
             alt=""
           />
-          <h3 className="about-us-item-title">
+          <p className={styles['about-us-item-title']}>
             Experience to give you a better results
-          </h3>
+          </p>
         </div>
       </div>
     </div>

@@ -44,12 +44,18 @@ export interface IOurTestimonial {
   rating: number
 }
 
+export interface IAuthorInfo {
+  time_to_read: string
+  name: string
+  avatar: string
+}
+
 export interface IOurBlog {
   id: 1
   img: string
   title: string
   created_at: string
-  author: string
+  author: IAuthorInfo
   content: string
   type: string
   full_content: string
@@ -74,12 +80,8 @@ export const digiencyApi = createApi({
     getOurTestimonial: build.query<IOurTestimonial[], void>({
       query: () => `our_testimonial`,
     }),
-    getOurBlogs: build.query<IOurBlog[]>({
-      query: args => {
-        return {
-          url: `blog_posts?_limit=6`,
-        }
-      },
+    getOurBlogs: build.query<IOurBlog[], void>({
+      query: () => `blog_posts?_limit=6`,
     }),
     getAllPosts: build.query<IOurBlog[], void>({
       query: () => `blog_posts`,

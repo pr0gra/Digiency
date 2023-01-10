@@ -6,11 +6,6 @@ import styles from './MainHero.module.css'
 import cx from 'classnames'
 
 export function MainHero() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  })
-
   return (
     <div className={styles['main-hero']}>
       <MediaLinks
@@ -20,19 +15,8 @@ export function MainHero() {
         twitterLink="/"
         skypeLink="/"
       />
-      <img
-        ref={ref}
-        className={cx(styles['hero-img'])}
-        src={mainHeroImg}
-        alt=""
-      />{' '}
-      <div
-        ref={ref}
-        className={cx(
-          styles['main-hero-text-part'],
-          inView ? styles['text-part-in-view'] : styles['text-part-out-view'],
-        )}
-      >
+      <img className={cx(styles['hero-img'])} src={mainHeroImg} alt="" />{' '}
+      <div className={cx(styles['main-hero-text-part'])}>
         <h1 className={styles['main-hero-text-part-title']}>
           We Are The Best
           <span> Digital Agency </span> for business

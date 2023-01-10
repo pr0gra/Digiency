@@ -101,7 +101,7 @@
   height: 31px;
 }
 
-.theme-icon {
+.theme-icon img {
   position: absolute;
   top: 13px;
   right: 0;
@@ -158,6 +158,10 @@
   }
 
   .theme-icon {
+    flex: 0;
+  }
+
+  .theme-icon img {
     position: relative;
     top: 0;
     margin-right: 0;

@@ -23,6 +23,10 @@
   margin-bottom: 18px;
 }
 
+.about-us-item-title {
+  word-break: keep-all;
+}
+
 .about-us-content-array {
   display: flex;
   flex-direction: column;
@@ -34,6 +38,9 @@
   max-width: 343px;
   padding: 20px 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--background-second-color);
   box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
 }

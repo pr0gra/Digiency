@@ -11,7 +11,7 @@
 
 .subtitle {
   margin-bottom: 22px;
-  color: #ff5300;
+  color: var(--pre-title-of-blog);
 }
 
 .title {

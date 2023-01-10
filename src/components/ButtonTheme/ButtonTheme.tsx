@@ -1,25 +1,15 @@
 import { memo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { switchTheme } from '../../../redux/themeSlice'
-import themeIcon from '../../assets/icons/theme-icon.svg'
 import lightThemeIcon from '../../assets/icons/sun.png'
 import darkThemeIcon from '../../assets/icons/dark.png'
 import autoThemeIcon from '../../assets/icons/auto-theme.png'
-import { SwitchingThemeAuto } from '../../functions/SwitchingThemeAuto'
 import styles from './ButtonTheme.module.css'
 
-interface Component {
-  styles?: string
-}
-interface FC {
-  name: string
-  content: string
-}
-type Test = FC
 export const ButtonTheme = memo(() => {
   const dispatch = useDispatch()
   const currentTheme = useSelector(state => state.theme.theme)
-
+  const windowsThemeIsDark = window.matchMedia('(prefers-color-scheme: dark)')
   function handleTheme() {
     if (currentTheme === 'light') {
       document.body.classList.add('dark-mode')
@@ -35,6 +25,7 @@ export const ButtonTheme = memo(() => {
       dispatch(switchTheme('light'))
     }
   }
+
   return (
     <img
       src={

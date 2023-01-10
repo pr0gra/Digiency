@@ -21,7 +21,7 @@ export function MainPage() {
       <TeamMember />
       <OurWork />
       <ClientsFeedback />
-      {/* // <OurBlog /> */}
+      <OurBlog />
       <ContactUs />
       <Footer />
       <FooterBottom />

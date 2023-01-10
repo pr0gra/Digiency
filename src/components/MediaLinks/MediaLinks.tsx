@@ -1,9 +1,5 @@
 import { HTMLAttributes, PropsWithChildren } from 'react'
 import styles from './MediaLinks.module.css'
-import facebookLogo from '../../assets/icons/facebook-fill.svg'
-import instLogo from '../../assets/icons/instagram-fill.svg'
-import twitterLogo from '../../assets/icons/twitter-fill.svg'
-import skypeLogo from '../../assets/icons/skype-fill.svg'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 

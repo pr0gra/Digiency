@@ -163,7 +163,11 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
         <h4 className={styles['button-text']}> Let’s Talk</h4>
       </button>
 
-      {!HomeVisibleButton && <ButtonTheme className={styles['theme-icon']} />}
+      {!HomeVisibleButton && (
+        <div className={styles['theme-icon']}>
+          <ButtonTheme />
+        </div>
+      )}
     </header>
   )
 }

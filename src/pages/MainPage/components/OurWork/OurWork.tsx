@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { OurWorkNav } from '../OurWorkNav/OurWorkNav'
 import { useGetOurWorksQuery } from '../../../../../redux'
 import { Picture } from '../../../../components/Picture/Picture'
-import { ourWorks } from '../../../../../redux/digiencyApi'
+import { IOurWorks } from '../../../../../redux/digiencyApi'
 
 export function OurWork() {
   const [projectType, setProjectType] = useState('All')
@@ -37,7 +37,7 @@ export function OurWork() {
               )
             })
           : data!
-              .filter((project: ourWorks) => {
+              .filter((project: IOurWorks) => {
                 return project.project_type === projectType
               })
               .map(project => {

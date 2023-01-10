@@ -71,7 +71,9 @@ export function OurBlogMain() {
                         src={authorIcon}
                         alt=""
                       />{' '}
-                      <p className={styles['info-text']}>{article.author}</p>{' '}
+                      <p className={styles['info-text']}>
+                        {article.author.name}
+                      </p>{' '}
                     </div>
                     <div className={styles['info-item']}>
                       <img

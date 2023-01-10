@@ -37,55 +37,55 @@ export function SearchPart({ setSearchText }: Props) {
         <h2 className={styles['title']}>Letest Post</h2>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon1} alt="" />
-          <h3 className={styles['post-title']}>
+          <h5 className={styles['post-title']}>
             Minimal Post With A Preview Image
-          </h3>
+          </h5>
         </li>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon2} alt="" />
-          <h3 className={styles['post-title']}>Good Design Makes Me Happy</h3>
+          <h5 className={styles['post-title']}>Good Design Makes Me Happy</h5>
         </li>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon3} alt="" />
-          <h3 className={styles['post-title']}>
+          <h5 className={styles['post-title']}>
             Best 27 Design Blogs for 2021
-          </h3>
+          </h5>
         </li>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon4} alt="" />
-          <h3 className={styles['post-title']}>
+          <h5 className={styles['post-title']}>
             Creative Ways To Use Infographics For Your Business
-          </h3>
+          </h5>
         </li>
         <li className={styles['latest-post']}>
           <img className={styles['post-img']} src={postIcon5} alt="" />
-          <h3 className={styles['post-title']}>
+          <h5 className={styles['post-title']}>
             Tumblr Banner Templates : Tips To Get Better Engagement
-          </h3>
+          </h5>
         </li>
       </ul>
       <div className={styles['categories-container']}>
         <h2 className={styles['title']}>Categories</h2>
         <ul className={styles['categories-list']}>
           <li className={styles['category']}>
-            <h3 className={styles['category-title']}>Business</h3>
-            <h3 className={styles['category-number']}>05</h3>
+            <h5 className={styles['category-title']}>Business</h5>
+            <h5 className={styles['category-number']}>05</h5>
           </li>
           <li className={styles['category']}>
-            <h3 className={styles['category-title']}>Introductions</h3>
-            <h3 className={styles['category-number']}>15</h3>
+            <h5 className={styles['category-title']}>Introductions</h5>
+            <h5 className={styles['category-number']}>15</h5>
           </li>
           <li className={styles['category']}>
-            <h3 className={styles['category-title']}>Design Blog</h3>
-            <h3 className={styles['category-number']}>65</h3>
+            <h5 className={styles['category-title']}>Design Blog</h5>
+            <h5 className={styles['category-number']}>65</h5>
           </li>
           <li className={styles['category']}>
-            <h3 className={styles['category-title']}>UI/UX Design</h3>
-            <h3 className={styles['category-number']}>08</h3>
+            <h5 className={styles['category-title']}>UI/UX Design</h5>
+            <h5 className={styles['category-number']}>08</h5>
           </li>
           <li className={styles['category']}>
-            <h3 className={styles['category-title']}>App Development</h3>
-            <h3 className={styles['category-number']}>16</h3>
+            <h5 className={styles['category-title']}>App Development</h5>
+            <h5 className={styles['category-number']}>16</h5>
           </li>
         </ul>
       </div>
@@ -93,22 +93,22 @@ export function SearchPart({ setSearchText }: Props) {
         <h2 className={styles['title']}>Tags</h2>
         <ul className={styles['tags-list']}>
           <li className={styles['tag-item']}>
-            <h3>Business</h3>
+            <h5>Business</h5>
           </li>
           <li className={styles['tag-item']}>
-            <h3>Graphic Design</h3>
+            <h5>Graphic Design</h5>
           </li>
           <li className={styles['tag-item']}>
-            <h3>Technology</h3>
+            <h5>Technology</h5>
           </li>
           <li className={styles['tag-item']}>
-            <h3>App Development</h3>
+            <h5>App Development</h5>
           </li>
           <li className={styles['tag-item']}>
-            <h3>Website Design</h3>
+            <h5>Website Design</h5>
           </li>
           <li className={styles['tag-item']}>
-            <h3>Business Idea</h3>
+            <h5>Business Idea</h5>
           </li>
         </ul>
       </div>
