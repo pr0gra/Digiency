@@ -10,9 +10,9 @@ interface PictureProps {
 type Props = PictureProps & PropsWithChildren<HTMLAttributes<HTMLImageElement>>
 
 export function Picture({ children, style, imgName, ...rest }: Props) {
-  const imgAvif = `/src/assets/images/${imgName}.avif`
-  const imgWebp = `/src/assets/images/${imgName}.webp`
-  const imgJpg = `/src/assets/images/${imgName}.jpg`
+  const imgAvif = `/assets/images/${imgName}.avif`
+  const imgWebp = `/assets/images/${imgName}.webp`
+  const imgJpg = `/assets/images/${imgName}.jpg`
 
   return (
     <picture className={cx(styles['picture'], style)} {...rest}>
