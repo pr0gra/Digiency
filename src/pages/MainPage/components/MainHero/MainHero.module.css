@@ -10,6 +10,7 @@
 
 .hero-img {
   margin: 0 auto;
+  width: 100%;
 }
 
 .text-part-in-view {
@@ -19,6 +20,7 @@
 .main-hero-text-part {
   margin-top: 50px;
   padding-bottom: 25px;
+  margin: 0;
 }
 
 .main-hero-text-part-title {
@@ -53,6 +55,7 @@
   .hero-img {
     align-self: center;
     margin: 0;
+    width: 374px;
   }
 
   .media-links {
@@ -67,6 +70,11 @@
 @media (min-width: 1440px) {
   .main-hero {
     justify-content: center;
+    align-items: center;
+  }
+
+  .main-hero-text-part {
+    margin: 0;
   }
 
   .hero-img {

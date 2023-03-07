@@ -17,7 +17,7 @@ export function ArticlePage() {
   return (
     <>
       <Header />
-      <ArticleHero data={data} />
+      <ArticleHero />
       <ArticleMain data={data} />
       <Footer />
       <FooterBottom />

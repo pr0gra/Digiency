@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 import digiencyMainLogo from '../../assets/icons/digiency-main-logo.svg'
-
+import darkBurgerMenu from '../../assets/icons/burger-menu-dark-theme.png'
 import burgerMenu from '../../assets/icons/burger-menu.svg'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
@@ -9,6 +9,8 @@ import cx from 'classnames'
 import { CSSTransition } from 'react-transition-group'
 import { ButtonTheme } from '../ButtonTheme/ButtonTheme'
 import { useInView } from 'react-intersection-observer'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../redux'
 
 interface HeaderProps {
   HomeVisibleButton?: boolean
@@ -22,6 +24,7 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
     triggerOnce: true,
     threshold: 0.5,
   })
+  const isDarkTheme = useSelector((state: RootState) => state.theme.darkTheme)
 
   return (
     <header ref={ref} {...rest} className={styles['header']}>
@@ -41,7 +44,7 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
             styles['burger-menu-img'],
             inView ? styles['in-view-burger'] : styles['out-view-burger'],
           )}
-          src={burgerMenu}
+          src={isDarkTheme ? darkBurgerMenu : burgerMenu}
           alt=""
         />
       </button>
@@ -102,12 +105,11 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
           <li className={styles['item']}>
             <Link to="/home" className={styles['item-link']}>
               <h4
-                style={{
-                  color:
-                    window.location.pathname === '/home' &&
-                    'var(--orange-permanent)',
-                }}
-                className={styles['item-text']}
+                className={cx(
+                  styles['item-text'],
+                  window.location.pathname === '/home' &&
+                    styles['active-item-text'],
+                )}
               >
                 Home
               </h4>
@@ -137,12 +139,11 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
               className={styles['item-link']}
             >
               <h4
-                style={{
-                  color:
-                    window.location.pathname === '/blog' &&
-                    'var(--orange-permanent)',
-                }}
-                className={styles['item-text']}
+                className={cx(
+                  styles['item-text'],
+                  window.location.pathname === '/blog' &&
+                    styles['active-item-text'],
+                )}
               >
                 Our Blog
               </h4>
@@ -156,14 +157,15 @@ export function Header({ HomeVisibleButton, ...rest }: Props) {
         </ul>
       </nav>
 
-      <button
-        className={styles['button']}
-        style={{ display: HomeVisibleButton ? 'flex' : 'none' }}
-      >
-        <h4 className={styles['button-text']}> Let’s Talk</h4>
-      </button>
-
-      {!HomeVisibleButton && <ButtonTheme className={styles['theme-icon']} />}
+      {!HomeVisibleButton ? (
+        <div className={styles['theme-icon-container']}>
+          <ButtonTheme />
+        </div>
+      ) : (
+        <button className={styles['button']}>
+          <h4 className={styles['button-text']}> Let’s Talk</h4>
+        </button>
+      )}
     </header>
   )
 }

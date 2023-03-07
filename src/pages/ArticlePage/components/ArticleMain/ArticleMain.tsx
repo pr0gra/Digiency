@@ -6,6 +6,7 @@ import styles from './ArticleMain.module.css'
 import timerIcon from '../../../../assets/icons/our-blog-timer.svg'
 import personIcon from '../../../../assets/icons/our-blog-person.svg'
 import messageIcon from '../../../../assets/icons/our-blog-message.svg'
+import { useState } from 'react'
 
 interface Props {
   data?: IOurBlog[]
@@ -13,14 +14,14 @@ interface Props {
 
 export function ArticleMain({ data }: Props) {
   const { id } = useParams()
+  const [state, setState] = useState('')
 
   const currentArticle = data!.find(post => post.id == parseInt(id!))
-  console.log(currentArticle)
 
   return (
     <div className={styles['article-main']}>
       <div className={styles['content-part']}>
-        <Picture className={styles['main-img']} imgName={currentArticle?.img} />
+        <Picture className={styles['main-img']} imgName={currentArticle!.img} />
         <ul className={styles['article-info']}>
           <li className={styles['article-info-item']}>
             <img className={styles['article-img']} src={timerIcon} alt="" />
@@ -46,7 +47,7 @@ export function ArticleMain({ data }: Props) {
           }}
         />
       </div>
-      <SearchPart />
+      <SearchPart setSearchText={setState} />
     </div>
   )
 }

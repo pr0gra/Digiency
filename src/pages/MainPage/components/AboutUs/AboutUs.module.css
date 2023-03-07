@@ -4,10 +4,10 @@
 }
 
 .about-us-img {
-  width: 372px;
   height: 192px;
   margin: 0 auto;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .about-us-text-part {
@@ -48,6 +48,7 @@
 @media (min-width: 767px) {
   .about-us-img {
     margin: 0;
+    width: 372px;
   }
 
   .top-part {

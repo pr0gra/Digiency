@@ -2,6 +2,7 @@ import { memo, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { switchTheme } from '../../../redux/themeSlice'
 import themeIcon from '../../assets/icons/theme-icon.svg'
+import { RootState } from '../../../redux'
 
 interface Component {
   styles?: string
@@ -14,13 +15,12 @@ type Test = FC
 export const ButtonTheme = memo(({ styles }: Component) => {
   const [invert, setInvert] = useState(0)
   const dispatch = useDispatch()
-  const isDarkTheme = useSelector(state => state.theme.darkTheme)
+  const isDarkTheme = useSelector((state: RootState) => state.theme.darkTheme)
 
   return (
     <img
       src={themeIcon}
       alt="light"
-      className={styles}
       id="switchTheme"
       style={{ filter: `invert(${+isDarkTheme})` }}
       onClick={() => {

@@ -81,7 +81,7 @@ export function OurTestimonial() {
           className={cx(
             styles['arrow-button'],
             styles['right-button'],
-            currentComments + 3 > data?.length && styles['button-disabled'],
+            currentComments + 3 > data!.length && styles['button-disabled'],
           )}
         >
           <img

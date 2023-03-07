@@ -16,6 +16,7 @@
 .img {
   margin: 0 auto;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .input {
@@ -31,7 +32,7 @@
   background: var(--background-colorful-component-containers);
 }
 
-.input[type='text-area'] {
+textarea[data-type='text-area'] {
   padding-top: 18px;
   padding-left: 18px;
   background: var(--background-colorful-component-containers);
@@ -81,7 +82,7 @@
   }
 
   .img {
-    min-width: 414px;
+    width: 414px;
     margin: 0;
   }
 
@@ -108,5 +109,9 @@
 
   .form-part {
     max-width: 670px;
+  }
+
+  .img {
+    width: 639px;
   }
 }

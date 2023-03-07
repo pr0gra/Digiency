@@ -99,7 +99,7 @@ export function ContactUsForm() {
 
         <textarea
           className={cx(styles['input'], styles['input-desktop'])}
-          type="text-area"
+          data-type="text-area"
           id="message"
           placeholder="Send Message"
           onChange={handleChange}

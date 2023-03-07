@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import { HOST } from '../src/constants/endpoints/endpoints'
 import { IOurBlog } from './digiencyApi'
+import { RootState } from './store'
 
 function parseLinkHeader(linkHeader: any) {
   const linkHeadersArray = linkHeader
@@ -14,16 +15,17 @@ function parseLinkHeader(linkHeader: any) {
   return Object.fromEntries(linkHeadersMap)
 }
 
-interface articlesState {
-  list: IOurBlog[]
-  pagination: object
-  loading: boolean
-  error: null | string
+interface IPagination {
+  first: string
+  last: string
+  next: string
 }
 
-interface IFetchArticles {
+interface articlesState {
   list: IOurBlog[]
   pagination: any
+  loading: boolean
+  error: null | string
 }
 
 interface ResponseArgs {
@@ -31,42 +33,40 @@ interface ResponseArgs {
   searchText: string
 }
 
-type Response = IFetchArticles | IOurBlog[]
+export const fetchArticles = createAsyncThunk(
+  'articles/fetchArticles',
+  async function (args: ResponseArgs) {
+    const { currentPage, searchText } = args
+    const response = await fetch(
+      `${HOST}/blog_posts?title_like=${searchText}&_limit=5&_page=${currentPage}`,
+    )
+    const data = await response.json()
 
-export const fetchArticles = createAsyncThunk<
-  Response,
-  ResponseArgs,
-  { rejectValue: string }
->('articles/fetchArticles', async function (args, { rejectWithValue }) {
-  const { currentPage, searchText } = args
+    if (!response.ok) {
+      throw new Error('error')
+    }
 
-  const response = await fetch(
-    `${HOST}/blog_posts?title_like=${searchText}&_limit=5&_page=${currentPage}`,
-  )
-  const data = await response.json()
+    if (response.headers.get('Link')) {
+      return {
+        articles: [...data],
+        pagination: { ...parseLinkHeader(response.headers.get('Link')) },
+      }
+    }
 
-  if (!response.ok) {
-    return rejectWithValue('server Error')
-  }
-
-  if (response.headers.get('Link')) {
     return {
       articles: [...data],
-      pagination: { ...parseLinkHeader(response.headers.get('Link')) },
+      pagination: {},
     }
-  }
-
-  console.log({ articles: [...data], pagination: {} }, 'хуй')
-
-  return {
-    articles: [...data],
-    pagination: {},
-  }
-})
+  },
+)
 
 const initialState: articlesState = {
   list: [],
-  pagination: {},
+  pagination: {
+    first: '',
+    last: '',
+    next: '',
+  },
   loading: false,
   error: null,
 }
@@ -74,11 +74,7 @@ const initialState: articlesState = {
 const articleSlice = createSlice({
   name: 'articles',
   initialState,
-  reducers: {
-    // addArticle(state, action) {
-    //   state.articles.push()
-    // },
-  },
+  reducers: {},
   extraReducers: builder => {
     builder
       .addCase(fetchArticles.pending, state => {
@@ -89,6 +85,7 @@ const articleSlice = createSlice({
         state.loading = false
         state.list = action.payload.articles
         state.pagination = action.payload.pagination
+        console.log(action.payload.pagination)
       })
   },
 })

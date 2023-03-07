@@ -71,6 +71,12 @@
   color: #fff;
 }
 
+.active-pagination-dot {
+  width: 49px;
+  background: #373737;
+  border-radius: 10px;
+}
+
 .pagination-dot {
   all: unset;
   width: 15px;

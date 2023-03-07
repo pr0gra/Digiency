@@ -16,7 +16,7 @@
 }
 
 .img {
-  max-width: 335px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -37,8 +37,8 @@
   }
 
   .img {
-    min-width: 307px;
-    height: 207px;
+    max-width: 307px;
+
     margin: 0;
   }
 }

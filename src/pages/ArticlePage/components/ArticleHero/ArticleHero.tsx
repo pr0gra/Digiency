@@ -1,9 +1,8 @@
 import { useParams } from 'react-router-dom'
-import { IOurBlog } from '../../../../../redux'
+import { IOurBlog, useGetAllPostsQuery } from '../../../../../redux'
 
 import { BlogHero } from '../../../../components/BlogHero/BlogHero'
 import styles from './ArticleHero.module.css'
-
 
 export function ArticleHero() {
   const { id } = useParams()
@@ -16,7 +15,7 @@ export function ArticleHero() {
   }
 
   const currentArticle = data!.find(post => {
-    post.id === parseInt(id!)
+    return post.id === parseInt(id!)
   })
 
   return (

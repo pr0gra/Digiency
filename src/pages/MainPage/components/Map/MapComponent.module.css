@@ -5,6 +5,10 @@
   margin-bottom: 50px;
 }
 
+.map * {
+  transition: initial;
+}
+
 @media (min-width: 768px) {
   .map {
     margin-top: 60px;

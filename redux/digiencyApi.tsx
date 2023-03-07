@@ -45,7 +45,7 @@ export interface IOurTestimonial {
 }
 
 export interface IOurBlog {
-  id: 1
+  id: number
   img: string
   title: string
   created_at: string
@@ -53,6 +53,7 @@ export interface IOurBlog {
   content: string
   type: string
   full_content: string
+  pagination: { first: string; next: string; last: string }
 }
 
 export const digiencyApi = createApi({

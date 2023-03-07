@@ -8,10 +8,15 @@
   text-align: center;
 }
 
+.contact-us-contact-way-img {
+  overflow: hidden;
+}
+
 .grades-array {
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .contact-us-text-part-subtitle {

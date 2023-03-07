@@ -8,13 +8,14 @@
 
 .our-work-navigation-list {
   display: flex;
-  gap: 18px;
+  gap: 5px;
   overflow-x: auto;
   list-style-type: none;
+  justify-content: center;
 }
 
 @media (min-width: 767px) {
   .our-work-navigation-list {
-    justify-content: center;
+    gap: 18px;
   }
 }

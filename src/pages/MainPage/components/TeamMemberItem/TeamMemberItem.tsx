@@ -1,4 +1,4 @@
-import { teamMembers } from '../../../../../redux'
+import { ITeamMembers } from '../../../../../redux'
 import styles from './TeamMemberItem.module.css'
 import { useState } from 'react'
 import cx from 'classnames'
@@ -6,7 +6,7 @@ import { Picture } from '../../../../components/Picture/Picture'
 import { MediaLinks } from '../../../../components/MediaLinks/MediaLinks'
 
 interface TeamMemberItemProps {
-  teamMember: teamMembers
+  teamMember: ITeamMembers
 }
 
 export function TeamMemberItem({ teamMember }: TeamMemberItemProps) {
@@ -15,7 +15,6 @@ export function TeamMemberItem({ teamMember }: TeamMemberItemProps) {
     <>
       <div key={teamMember.id} className={styles['scrolling-container']}>
         <Picture
-          style={{ width: '270px', height: '250px' }}
           className={styles['picture']}
           onMouseEnter={() => setShowingHoverContent(true)}
           onMouseLeave={() => setShowingHoverContent(false)}

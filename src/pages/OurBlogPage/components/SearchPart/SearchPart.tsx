@@ -10,7 +10,6 @@ import { useState } from 'react'
 interface Props {
   setSearchText: React.Dispatch<React.SetStateAction<string>>
 }
-
 export function SearchPart({ setSearchText }: Props) {
   const [inputValue, setInputValue] = useState('')
 

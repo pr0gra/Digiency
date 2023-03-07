@@ -31,12 +31,6 @@ export function OurCaseStudy() {
                   <Picture
                     onMouseEnter={() => setOnMouseEnterId(project.id)}
                     onMouseLeave={() => setOnMouseEnterId(0)}
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}
                     className={styles['picture']}
                     key={project.id}
                     imgName={project.img}

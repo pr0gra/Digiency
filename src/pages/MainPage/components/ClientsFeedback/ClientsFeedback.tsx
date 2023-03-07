@@ -103,16 +103,16 @@ export function ClientsFeedback() {
         {chunkify(data!).map((_, i) => {
           return (
             <button
-              style={{
-                width: activeButton === i && '49px',
-                background: activeButton === i && ' #373737',
-              }}
               onClick={() => {
                 setVisibleComments(i)
                 setActiveButton(i)
               }}
               key={i}
-              className={cx(styles['pagination-dot'])}
+              className={cx(
+                activeButton == i
+                  ? styles['active-pagination-dot']
+                  : styles['pagination-dot'],
+              )}
             ></button>
           )
         })}{' '}

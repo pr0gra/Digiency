@@ -27,7 +27,6 @@ export function OurBlogMain() {
   const [currentPage, setCurrentPage] = useState(1)
   const [activeButton, setActiveButton] = useState(0)
   const [searchText, setSearchText] = useState('')
-  const [state, setState] = useState('')
 
   useEffect(() => {
     if (searchText !== '') {
@@ -51,7 +50,6 @@ export function OurBlogMain() {
                 <Picture
                   className={styles['article-img']}
                   imgName={article.img}
-                  alt="img"
                 />
                 <div className={styles['bottom-part']}>
                   <div className={styles['article-info']}>
